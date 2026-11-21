@@ -1,0 +1,21 @@
+{
+  "mode": "built-in image_gen",
+  "direction": "Cor de capa de disco; colagem de papel e textura de impressão, respeitando o layout e a paleta definidos pelo responsável.",
+  "images": [
+    {
+      "name": "pulso-pandeiro",
+      "prompt": "Use case: illustration-story. Asset type: transparent cutout illustration for a playful Brazilian music production website, individual isolated object. Subject: a joyful Brazilian pandeiro tambourine, one instrument only, tilted in a lively three-quarter view, orange thick wooden ring, warm peach drum skin, sky-blue and dark ink metal jingles, a few short irregular orange percussion motion marks around it. Style: expressive handmade layered cut-paper collage with tactile screenprinted ink and visible paper grain, bold organically imperfect contours, subtle dimensional layers and thick ink-black details. Contemporary independent record sleeve artwork, sophisticated playful editorial illustration, NOT photoreal, NOT glossy 3D, NOT a generic icon. Strict palette ink #151718, peach #FFE5CF, sunflower yellow #FFC629, orange #FF6B35, emerald #00B87C, sky #8ED8F8. Composition: single large centered object fully contained with generous transparent margins, squarish landscape composition. Genuine transparent background, no ground plane, no shadow outside the cutout, no rectangular backdrop. No people, no text, no logos, no watermark.",
+      "source": "/Users/davidabt/.codex/generated_images/01a1eab9-535a-7e00-9b54-1a6d6cddd01b/exec-8089db35-4ce3-4213-88d2-4269f9a06782.png"
+    },
+    {
+      "name": "escuta-fones",
+      "prompt": "Use case: illustration-story. Asset type: transparent cutout illustration for a colorful music production website, individual isolated object. Subject: one sculptural pair of over-ear studio headphones, loosely arched headband leaning right, soft sky-blue cushions, ink-black headband and peach earcups with orange and sunflower-yellow accents, an expressive black audio cable curling into a loose loop below. Style: handmade layered cut-paper collage with tactile screenprinted ink and visible paper grain, bold organically imperfect contours, subtle dimensional layers, playful but sophisticated independent music album artwork. NOT photoreal, NOT glossy 3D, NOT a generic vector icon. Strict palette ink #151718, peach #FFE5CF, sunflower yellow #FFC629, orange #FF6B35, emerald #00B87C, sky #8ED8F8. Composition: single pair of headphones fully contained, wide squarish silhouette and generous transparent margins. Genuine transparent background, no ground plane or rectangular backdrop, no heavy drop shadow. No text, no people, no logos, no watermark.",
+      "source": "/Users/davidabt/.codex/generated_images/01a1eab9-535a-7e00-9b54-1a6d6cddd01b/exec-14f99921-906c-4a66-9bb2-75bb3209ede0.png"
+    },
+    {
+      "name": "ideia-cassete",
+      "prompt": "Use case: illustration-story. Asset type: transparent cutout editorial illustration for the project briefing section of a colorful Brazilian music production website. Subject: an unbranded peach and sunflower-yellow audio cassette with visible two ink-black tape spools, tilted a little counterclockwise, one orange wooden pencil diagonally through one spool as if rewinding the cassette, one short emerald loose ribbon of magnetic tape curling outward. Tape labels blank, no typography. Style: expressive handmade layered cut-paper collage, tactile screenprinted ink texture and visible paper grain, slightly imperfect organic shapes, playful independent record sleeve artwork with subtle physical paper depth, NOT glossy 3D, NOT photoreal, NOT generic vector clipart. Strict palette ink #151718, peach #FFE5CF, sunflower yellow #FFC629, orange #FF6B35, emerald #00B87C, sky #8ED8F8. Composition: one compact clear still-life fully contained, mostly horizontal with generous transparent margins, pencil must fit inside frame. Genuine transparent background, no rectangular backdrop, no ground plane, no text, no people, no logo, no watermark.",
+      "source": "/Users/davidabt/.codex/generated_images/01a1eab9-535a-7e00-9b54-1a6d6cddd01b/exec-9fd72c91-3f51-4443-a1b1-65cf9dda663a.png"
+    }
+  ]
+}

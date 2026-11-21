@@ -1,0 +1,37 @@
+{
+  "mode": "built-in image_gen",
+  "date": "2026-11-17",
+  "note": "Imagens conceituais geradas para o site; não documentam instalações ou equipamentos da Abt Sonora. WebP em assets/img; SVGs anteriores preservados.",
+  "images": [
+    {
+      "name": "frequencia",
+      "prompt": "Use case: stylized-concept. Asset type: wide music production website hero artwork, landscape 3:2. Create an exquisite abstract sculptural sound wave: dozens of thin closely spaced orange copper concentric elliptical ribbons flowing and bending into a deep black void, tactile brushed metal with delicate warm edge light, charcoal #151718 background, burnt orange #FF6B35 highlights, restrained ivory reflections. Dramatic macro studio photography of a physical sound sculpture, contemporary experimental album cover, refined minimal art direction, crisp dimensional texture, no neon rainbow, no text, no logos, no watermark. Main sculpture on right and center, dark edges for seamless blending into charcoal website. Not a UI or webpage mockup.",
+      "source": "/Users/davidabt/.codex/generated_images/01a1eab9-535a-7e00-9b54-1a6d6cddd01b/exec-16c9ce18-662c-4717-a65a-e1df6fe2e4bf.png"
+    },
+    {
+      "name": "servico-jingle",
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape 4:3 conceptual editorial image for a music production website. Close-up of a beautiful unbranded matte charcoal studio condenser microphone in a shock mount, circular black pop filter slightly behind to right, finely detailed woven mesh, warm orange sidelight, deep charcoal acoustic studio background softly out of focus. Restrained palette charcoal #151718, copper orange #FF6B35, warm ivory #F0EEE8. Premium contemporary music magazine photography, tactile authentic materials, cinematic soft shadows, quiet confidence, asymmetrical composition with microphone fully within frame. No people, text, logos, watermarks, neon or illustration. This is a conceptual scene, not documentation of a real business.",
+      "source": "/Users/davidabt/.codex/generated_images/01a1eab9-535a-7e00-9b54-1a6d6cddd01b/exec-f8004fa9-6723-4ee4-ae8b-68c10257e1a5.png"
+    },
+    {
+      "name": "servico-trilha",
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape 4:3 conceptual editorial image for music scoring service on a website. Intimate diagonal close-up of an unbranded modern analog synthesizer keyboard on a dark wood music production desk, elegant ivory and black keys leading through foreground, tactile matte graphite knobs and one small warm orange indicator on top. Background fades to deep charcoal, subtle amber sidelight. Palette #151718 charcoal, #FF6B35 orange accents, #F0EEE8 ivory, muted wood. Premium cinematic music magazine photography, carefully arranged, beautiful restrained composition, realistic product detail, no people, readable text, logos, watermarks or neon. Conceptual scene, not a specific actual studio.",
+      "source": "/Users/davidabt/.codex/generated_images/01a1eab9-535a-7e00-9b54-1a6d6cddd01b/exec-06a9df5c-02bb-422d-80d9-2c28d8fc586b.png"
+    },
+    {
+      "name": "servico-ambiente",
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape 4:3 conceptual editorial image for ambient sound design service website. A beautiful quiet contemporary listening space, sculptural low warm ivory armchair, one discreet unbranded black speaker on a slim stand, warm walnut slat wall and light textured plaster, late afternoon light casting long soft shadows. Small burnt orange sculptural side table as accent. Minimal contemporary interior, intimate and acoustically thoughtful, inviting sense of stillness and spaciousness. Palette charcoal #151718, warm ivory #F0EEE8, muted walnut, restrained orange #FF6B35. Premium architectural photography, no people, no text, logos or watermark. Conceptual space, not the business's premises.",
+      "source": "/Users/davidabt/.codex/generated_images/01a1eab9-535a-7e00-9b54-1a6d6cddd01b/exec-d6890293-e97f-4bb9-bc06-e6eee3bbb66f.png"
+    },
+    {
+      "name": "estudio-sessao",
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape 3:2 conceptual editorial image for music production website. A restrained intimate contemporary music production workstation seen from slightly above and to the side: two compact black studio monitor speakers framing a screen with softly blurred abstract horizontal audio track colors, small MIDI keyboard on walnut desk, discreet dark acoustic wall panels, a warm practical orange light. The screen is a background element with no readable text. Cinematic editorial photography, realistic equipment proportions and cables kept tidy, rich charcoal #151718 shadows, warm ivory highlights, copper orange #FF6B35 lighting, premium understated atmosphere. No people, logos, watermark, show stage or neon. This illustrates music production conceptually; not a photograph of a particular actual business studio.",
+      "source": "/Users/davidabt/.codex/generated_images/01a1eab9-535a-7e00-9b54-1a6d6cddd01b/exec-17e7f997-a884-40fa-85aa-8d7df6224f2f.png"
+    },
+    {
+      "name": "mesa",
+      "prompt": "Use case: photorealistic-natural. Asset type: landscape 4:3 conceptual editorial image for composition process on a music production website. Beautiful overhead still life on dark charcoal studio desk: unbranded black over-ear studio headphones resting beside an open warm ivory notebook with a few abstract pencil musical gestures, a graphite pencil and the cropped corner of a compact charcoal MIDI controller with ivory pads and one orange accent. Deliberate spare composition, tactile paper, matte metal, soft warm directional daylight, quiet creative work in progress. Restrained palette charcoal #151718, warm ivory #F0EEE8, small orange #FF6B35 accents. Contemporary premium music editorial photography. No readable text, no logos, no people, no watermark. Not a UI mockup.",
+      "source": "/Users/davidabt/.codex/generated_images/01a1eab9-535a-7e00-9b54-1a6d6cddd01b/exec-f987c457-22d9-4afe-a4e9-c5ed095ffb93.png"
+    }
+  ]
+}
