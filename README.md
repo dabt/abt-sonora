@@ -78,7 +78,7 @@ Pesquisar disponibilidade do nome; apontar `sonora.abt.dev.br` para a hospedagem
 
 ## Sound design e comparação antes/depois
 
-O quarto serviço apresenta efeitos, impactos, transições e texturas sonoras. A seção `#antes-depois` permite alternar entre duas versões sem reiniciar o trecho, com pausa, retomada e uma posição compartilhada. A troca usa duas fontes no mesmo relógio Web Audio com transição suave de volume. Iniciar a comparação interrompe o player e os exemplos; iniciar outro áudio interrompe a comparação.
+O quarto serviço apresenta efeitos, impactos, transições e texturas sonoras. O exemplo `#antes-depois`, dentro do próprio serviço de Sound design, permite alternar entre duas versões sem reiniciar o trecho, com pausa, retomada e uma posição compartilhada. A troca usa duas fontes no mesmo relógio Web Audio com transição suave de volume. Iniciar a comparação interrompe o player e os exemplos; iniciar outro áudio interrompe a comparação.
 
 Sem gravações publicadas, há um estudo de interface de oito segundos, sintetizado no navegador e identificado como demonstração. As duas versões compartilham os mesmos sinais; a segunda acrescenta movimentos, impactos e ressonâncias. Os volumes médios da demonstração são aproximados para reduzir a influência de volume na comparação. Não é um trabalho de cliente nem demonstração de restauração ou mixagem de uma gravação real.
 
@@ -89,3 +89,5 @@ Para publicar um par real:
 3. Confira troca, pausa e avanço no navegador. Diferenças maiores que 0,15 segundo na duração dos arquivos são rejeitadas para evitar comparações desalinhadas.
 
 Para ocultar o estudo sintetizado sem publicar arquivos, defina `demo: false`. O HTML mantém um aviso quando não há suporte ao áudio. A implementação fica em `sound-design.js`; nada toca automaticamente.
+
+A imagem principal de Sound design é uma fotografia conceitual de captação de efeitos, gerada com ImageGen e tratada com o mesmo filtro de duas cores das demais fotos de serviço. Os arquivos são `assets/img/servico-sound-design-720.webp` e `assets/img/servico-sound-design-1200.webp`; o prompt está em `docs/foto-sound-design.json`. A ilustração anterior do gravador permanece como detalhe de 52 a 68 pixels no cabeçalho da comparação.

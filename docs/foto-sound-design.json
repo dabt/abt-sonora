@@ -1,0 +1,10 @@
+{
+  "mode": "built-in image_gen",
+  "prompt": "Use case: photorealistic-natural. Asset type: conceptual editorial studio photograph for the Sound design service on a music production website, matching a series of close-up photographs of a studio microphone, synthesizer and listening room. Scene: intimate foley sound recording workstation on a dark walnut table. Main subject: an unbranded professional portable field recorder with a pair of crossed metal microphone capsules, angled diagonally toward a small loosely coiled steel spring and one crumpled sheet of paper, everyday materials used to create sound effects. Recorder foreground in crisp focus, clearly recognizable buttons with no readable labels, tactile matte charcoal metal and fine microphone mesh. Background: softly blurred dark acoustic studio panels, no computer interface or people. Composition: restrained premium music magazine still life, three-quarter close-up, mostly square frame with safe margins for a rounded portrait crop. Lighting: warm orange side light and soft ivory highlights, rich charcoal shadows, realistic paper fibers, brushed metal and wood grain. Palette charcoal #151718, warm ivory/peach #FFE5CF, walnut, restrained copper orange #FF6B35; high tonal separation suitable for a two-color photographic filter on the website. Authentic editorial photography, natural optical depth of field. No illustration, collage, paper-cut style, 3D render, text, logos, watermarks, music notes, show stage, neon, rainbow or decorative floating objects. This is a conceptual scene, not a photograph of the actual business premises.",
+  "source": "/Users/davidabt/.codex/generated_images/01a1eab9-535a-7e00-9b54-1a6d6cddd01b/exec-13c8c0df-8e00-484b-ae5b-9ff8588b89ad.png",
+  "outputs": [
+    "assets/img/servico-sound-design-720.webp",
+    "assets/img/servico-sound-design-1200.webp"
+  ],
+  "direction": "Fotografia conceitual de captação de efeitos sonoros; recebe no site o mesmo filtro de duas cores das outras imagens de serviço."
+}

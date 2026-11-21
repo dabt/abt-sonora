@@ -204,58 +204,45 @@
         </article>
 
         <article class="service service-sound-design" id="sound-design">
-          <div class="sound-design-art" aria-hidden="true">
-            <svg viewBox="0 0 560 560" fill="none" focusable="false">
-              <circle cx="280" cy="280" r="202" fill="#FFE5CF"/>
-              <path d="M38 175H160Q190 90 220 175T280 175T340 175H522" stroke="#151718" stroke-width="18" stroke-linecap="round"/>
-              <path d="M38 280H105L130 240 155 320 180 180 205 380 230 120 255 440 280 70 305 440 330 120 355 380 380 180 405 320 430 240 455 280H522" stroke="#FF6B35" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="M38 385H145Q185 320 225 385T305 385T385 385H522" stroke="#00724C" stroke-width="18" stroke-linecap="round"/>
-            </svg>
-          </div>
+          <img class="service-img" src="assets/img/servico-sound-design-1200.webp" srcset="assets/img/servico-sound-design-720.webp 720w, assets/img/servico-sound-design-1200.webp 1200w" sizes="(max-width: 1000px) 90vw, 45vw" alt="Gravador de campo junto a uma mola e papel amassado usados para criar efeitos sonoros" width="1200" height="1200" loading="lazy" decoding="async">
           <div class="service-body">
             <span class="service-label">Movimento e presença</span><h3>Sound design</h3>
             <p>Efeitos sonoros que dão peso a um movimento, acompanham uma transição ou tornam uma interação reconhecível.</p>
             <p>Combinamos sons gravados, síntese e edição para criar impactos, passagens e texturas no tempo da imagem. Cada camada tem uma função: chamar atenção, sugerir um material ou dar continuidade à cena.</p>
-            <a class="text-link sound-design-link" href="#antes-depois">Ouça a diferença no antes e depois</a>
+            <div class="examples sound-design-comparison" id="antes-depois" aria-labelledby="comparison-title" data-comparison>
+              <div class="compare-player">
+                <div class="compare-heading">
+                  <div><p class="ex-title">Antes e depois</p><h4 id="comparison-title" data-compare-title>Uma interface ganha movimento.</h4></div>
+                  <img class="compare-cutout" src="assets/img/sound-design-400.webp" alt="" width="400" height="400" loading="lazy" decoding="async">
+                </div>
+                <p class="compare-description" data-compare-description>Três momentos: abertura, transição e confirmação. Antes, sinais simples; depois, movimentos, impactos e ressonâncias.</p>
+                <p class="ex-note" data-compare-note>Demonstração sintetizada. Não é um trabalho de cliente.</p>
+                <div class="compare-modes" role="group" aria-label="Versão do áudio" hidden>
+                  <button type="button" data-compare-mode="before" aria-pressed="false"><span>Antes</span>Sinal simples</button>
+                  <button type="button" data-compare-mode="after" aria-pressed="true"><span>Depois</span>Camadas e textura</button>
+                </div>
+                <div class="compare-scene" aria-hidden="true">
+                  <span data-compare-cue="0"><i></i>Abertura</span>
+                  <span data-compare-cue="1"><i></i>Transição</span>
+                  <span data-compare-cue="2"><i></i>Confirmação</span>
+                </div>
+                <div class="compare-controls" hidden>
+                  <button class="compare-play" type="button" data-compare-play aria-label="Tocar comparação">Ouvir comparação</button>
+                  <div class="compare-position">
+                    <label class="sr-only" for="compare-seek">Posição na comparação</label>
+                    <input id="compare-seek" type="range" min="0" max="1000" step="1" value="0" disabled>
+                    <div class="compare-times"><span data-compare-time>0:00</span><span data-compare-duration>0:08</span></div>
+                  </div>
+                </div>
+                <p class="compare-state" role="status" data-compare-state>Ative o JavaScript para ouvir a comparação.</p>
+              </div>
+            </div>
             <div class="service-more">
               <div><h4>Serve para</h4><ul><li>Vídeos e animações</li><li>Interfaces e aplicativos</li><li>Aberturas e transições</li><li>Experiências digitais</li></ul></div>
               <div><h4>Pode incluir</h4><ul><li>Efeitos e impactos</li><li>Texturas e atmosferas</li><li>Sincronização com a imagem</li><li>Camadas de áudio separadas</li></ul></div>
             </div>
           </div>
         </article>
-      </div>
-    </section>
-
-    <section class="comparison" id="antes-depois" aria-labelledby="comparison-title" data-comparison>
-      <div class="shell comparison-grid">
-        <div class="comparison-intro">
-          <span class="session-label">Antes e depois</span>
-          <h2 id="comparison-title">O que o<br>som muda.</h2>
-          <p>Ouça o mesmo trecho e alterne entre as versões. A reprodução continua do mesmo ponto para você perceber o que cada camada acrescenta.</p>
-          <p class="comparison-note" data-compare-note>Demonstração sintetizada para explorar a ideia. Não é um trabalho de cliente.</p>
-        </div>
-        <div class="compare-player">
-          <h3 data-compare-title>Uma interface ganha movimento.</h3>
-          <p class="compare-description" data-compare-description>Três momentos: abertura, transição e confirmação. Antes, sinais simples; depois, movimentos, impactos e ressonâncias.</p>
-          <div class="compare-modes" role="group" aria-label="Versão do áudio" hidden>
-            <button type="button" data-compare-mode="before" aria-pressed="false"><span>Antes</span>Sinal simples</button>
-            <button type="button" data-compare-mode="after" aria-pressed="true"><span>Depois</span>Camadas e textura</button>
-          </div>
-          <div class="compare-scene" aria-hidden="true">
-            <span data-compare-cue="0"><i></i>Abertura</span>
-            <span data-compare-cue="1"><i></i>Transição</span>
-            <span data-compare-cue="2"><i></i>Confirmação</span>
-          </div>
-          <div class="compare-controls" hidden>
-            <button class="compare-play" type="button" data-compare-play aria-label="Tocar comparação">Ouvir comparação</button>
-            <div class="compare-position">
-              <label class="sr-only" for="compare-seek">Posição na comparação</label>
-              <input id="compare-seek" type="range" min="0" max="1000" step="1" value="0" disabled>
-              <div class="compare-times"><span data-compare-time>0:00</span><span data-compare-duration>0:08</span></div>
-            </div>
-          </div>
-          <p class="compare-state" role="status" data-compare-state>Ative o JavaScript para ouvir a comparação.</p>
-        </div>
       </div>
     </section>
 

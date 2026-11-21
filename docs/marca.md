@@ -116,3 +116,7 @@ Disco de anéis. A imagem em duas cores fica num círculo grande, cercado por an
 ## Sound design e antes/depois
 
 Sound design entra como serviço próprio: criação e edição de efeitos, impactos, transições e texturas para vídeos, animações e interfaces. A página inclui uma comparação sincronizada entre sinal simples e camadas de sound design. O estudo inicial é sintetizado no navegador e identificado como demonstração, sem atribuição a cliente ou promessa de resultado em gravação real. Pares de áudio autorizados podem substituir o estudo em `assets/audio/comparacao.js`.
+
+### Sound design integrado ao serviço
+
+O antes/depois passa a integrar o próprio bloco de Sound design, na posição dos exemplos sonoros dos outros serviços. A seção independente foi removida. A imagem principal agora é fotográfica e recebe o mesmo tratamento de duas cores das demais imagens dos serviços. A ilustração de papel recortado do gravador aparece apenas como detalhe no cabeçalho do exemplo.
