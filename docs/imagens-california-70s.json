@@ -1,0 +1,25 @@
+{
+  "date": "2026-11-23",
+  "method": "built-in image_gen",
+  "note": "Cenas imaginadas para a identidade visual. Não documentam instalações reais da abt sonora.",
+  "images": [
+    {
+      "name": "california-studio",
+      "prompt": "Use case: historical-scene. Asset type: large landscape 3:2 editorial photograph for an independent music and audiovisual studio website. Primary request: a deeply evocative imagined California recording studio in 1973, the relaxed Laurel Canyon creative spirit, sun-warmed, intimate, soulful, lived-in rather than luxurious. Composition: wide view from a low angle beside a rust-red corduroy lounge chair, a compact walnut analog mixing desk and two large reel-to-reel tape reels in the middle ground, a few tactile ivory piano keys at lower right, large windows opening to hazy California palms and golden late afternoon sunshine, aqua painted window trim, a mustard throw and cream acoustic curtains. Carefully composed yet casually imperfect, quietly artistic editorial photo on aged 35mm color negative film, authentic fine grain, gentle halation, slightly faded warm highlights, rich natural shadows, imperfect lens softness, believable period materials and equipment. Palette dark charcoal green #222A2A, muted aqua #4FBBBC, vermilion #EC4624, warm amber #F39120, cream #E2DAC2. Realistic spatial perspective. No people, no text, no lettering, logos, watermark, modern screens, modern headphones, neon, sci-fi, abstract metal wave sculptures, glossy CGI, fake dust overlays or exaggerated sepia. A conceptual imagined space, not documentary photography of a real business. Output a beautiful full-bleed photograph only, not a website mockup.",
+      "source": "/Users/davidabt/.codex/generated_images/01a1eab9-535a-7e00-9b54-1a6d6cddd01b/exec-ef537239-ec74-40c5-b292-5d8b84c3965b.png",
+      "outputs": [
+        "/Users/davidabt/WebstormProjects/abt-sonora/assets/img/california-studio-1440.webp",
+        "/Users/davidabt/WebstormProjects/abt-sonora/assets/img/california-studio-720.webp"
+      ]
+    },
+    {
+      "name": "california-tape",
+      "prompt": "Use case: historical-scene. Asset type: landscape 3:2 editorial still life photograph for the process section of an independent music studio website with a 1970s California aesthetic. Primary request: an intimate sunlit detail of a creative afternoon in a California analog music studio circa 1973. Close overhead oblique composition of a brushed aluminum open reel-to-reel tape machine with two cream reels and warm walnut case, a loosely coiled tape ribbon on a sunlit wood tabletop, a handwritten notebook without legible words cropped at edge, small rust-red glass ashtray containing only a guitar pick, no cigarettes, and an aqua fabric chair partially entering frame. Light and shadow from a palm frond across the cream curtain and table, tactile and casually human. Art direction from a vintage independent record sleeve, realistic 35mm film photograph, fine organic grain, warm honey sunlight, gently faded pigments, imperfect edge softness, restrained analog halation. Palette #222A2A charcoal, #4FBBBC aqua, #EC4624 vermilion, #F39120 amber, #E2DAC2 cream. No people, no readable text, no brands, no logos, no watermark, no modern devices, no digital screen, no CGI, no highly polished product render, no generic abstract sound waves. Full bleed photograph, not collage or web mockup.",
+      "source": "/Users/davidabt/.codex/generated_images/01a1eab9-535a-7e00-9b54-1a6d6cddd01b/exec-d6b186a1-66b6-4886-9b7b-9780072d05b1.png",
+      "outputs": [
+        "/Users/davidabt/WebstormProjects/abt-sonora/assets/img/california-tape-960.webp",
+        "/Users/davidabt/WebstormProjects/abt-sonora/assets/img/california-tape-640.webp"
+      ]
+    }
+  ]
+}

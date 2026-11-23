@@ -1,0 +1,11 @@
+{
+  "date": "2026-11-23",
+  "method": "built-in image_gen",
+  "prompt": "Use case: product-mockup. Asset type: transparent cutout for a music studio website audio player. Primary request: a single beautiful vintage 1970s compact audio cassette, straight-on orthographic front view, perfectly horizontal, isolated on genuine transparent background. Warm realistic studio product photography with tactile slightly worn cream plastic, a printed paper label in cream, burnt red #EC4624, mustard orange #F39120 and a small aqua #4FBBBC stripe. California independent recording studio mood, analog charm. Label text only 'abt sonora' in lowercase and 'lado a' small. Two clearly visible perfectly round ivory reel hubs at left and right, aligned horizontally, inside a dark transparent central tape window. Visible brown magnetic tape rolls, five tiny screws, realistic details and subtly worn edges. Entire cassette visible, occupying most of a wide 3:2 canvas, even margins, no perspective or rotation, no other objects, no surface, no cast shadow outside the cutout, no watermark. Cleanly separated circular hubs with dark centers will later be animated in the website.",
+  "source": "/Users/davidabt/.codex/generated_images/01a1eab9-535a-7e00-9b54-1a6d6cddd01b/exec-bf073e33-b91a-4d2a-9975-38ad77510292.png",
+  "outputs": [
+    "assets/img/cassette-sonora-768.webp",
+    "assets/img/cassette-sonora-1536.webp"
+  ],
+  "animation": "Dois recortes circulares da própria imagem em CSS, sincronizados com is-playing. Pausa preserva posição e prefers-reduced-motion desativa rotação."
+}

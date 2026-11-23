@@ -1,93 +1,82 @@
-# Abt Sonora
+# abt sonora
 
-Marca de produção musical e sonora da Abt Tecnologia. Identidade Sulco escolhida em 17/11/2026; site em preparação local.
+Estúdio independente de música e experimentação audiovisual. Reposicionamento aprovado em 23/11/2026. O nome é sempre escrito em minúsculas.
 
-## Executar
+## Desenvolvimento
 
-Node.js 20 ou superior. Sem dependências JavaScript externas.
+Node.js 20+, sem dependências externas.
 
 ```sh
 npm run dev
 npm run check
+npm test
 npm run build
 ```
 
-Site: http://127.0.0.1:4322/ · Identidade: http://127.0.0.1:4322/identidade.html
+Prévia: http://127.0.0.1:4322/. O build estático sai em `dist/`; `vercel.json` mantém a configuração de hospedagem. Não houve publicação nesta etapa. O ambiente de produção e o domínio não foram verificados.
 
-O build gera `dist/`. `vercel.json` prepara uma futura publicação estática na Vercel. Nenhum projeto de hospedagem foi registrado e nenhum domínio foi configurado. O site está com `noindex, nofollow` para esta etapa de apresentação; veja a seção SEO e indexação para liberar no lançamento.
+## Estrutura
 
-## Conteúdo
+- `index.html`: abertura, seleção de obras, campos de exploração e apresentação editorial.
+- `trabalhos/index.html`: catálogo com estado vazio e filtros quando houver mais de uma categoria publicada.
+- `estudio/index.html`: visão, processo e contato institucional.
+- `scripts/project-template.html`: modelo para páginas individuais, geradas em `/projetos/<slug>/`.
+- `scripts/catalogue.mjs`: valida dados, renderiza obras e prepara metadados. Compartilhado entre desenvolvimento e build.
+- `assets/catalogo.json`: fonte local do catálogo, inicialmente vazia.
+- `site.js`: menu responsivo, filtros e coordenação de mídias com controles nativos.
+- `estudos.js`: estudo demonstrativo de 12 segundos, em três arranjos sincronizados, iniciado somente após clique.
+- `assets/fonts/lora-variable.ttf`: fonte de leitura Lora, com licença SIL OFL em `assets/fonts/OFL-lora.txt`.
+- `styles.css`: tokens e estilos da direção California, lado B.
+- `identidade.html` e `logos.html`: referências internas, disponíveis localmente e excluídas do build público.
 
-- `index.html`: apresentação, serviços, estúdio, processo e contato.
-- `assets/fonts`: Fraunces (títulos) e Instrument Sans (texto), ambas OFL, em woff2.
-- `identidade.html`: prancha de assinatura, símbolo, cores, tipografia e orientações iniciais.
-- `assets/abt-sonora-*.svg`: seis logos e símbolos em curvas, em três cores.
-- `assets/fonts/`: fontes locais com licenças SIL OFL.
-- `assets/audio/faixas.js`: lista das faixas que aparecem na seção Ouça (veja abaixo).
-- `assets/img/`: seis imagens conceituais geradas com ImageGen, em WebP de 720 e 1440 px. Substituem as ilustrações anteriores, cujos SVGs foram preservados.
-- `docs/ilustracoes-complementares.json`: prompts das três ilustrações de papel recortado (pandeiro, fones e cassete), em WebP com transparência de 400 e 720 px.
-- `docs/imagens-geradas.json`: prompts completos, direção visual e origem dos novos arquivos. O script `make-illustrations.py` mantém apenas as ilustrações SVG antigas e não gera as imagens atuais.
-- `docs/marca.md`: posicionamento, linguagem e decisões.
-- `scripts/export-brand.py`: exporta os SVGs a partir dos masters Sulco em curvas; usa apenas a biblioteca padrão do Python. Executar `python3 scripts/export-brand.py`.
+Nenhuma obra, equipe, parceria, canal ou lançamento foi inventado. As cenas de estúdio californiano dos anos 70 são imagens conceituais geradas para a identidade, não fotografias de instalações reais nem capas de obras. Prompts, ferramenta e origens estão em `docs/imagens-california-70s.json` e `docs/imagens-polaroids-70s.json`. Molduras de polaroid são feitas em CSS; texturas e ícones são SVGs locais.
 
-O contato usa o endereço institucional já existente, `contato@abt.dev.br`, com assunto da Abt Sonora. A página não tem formulário, rastreadores ou áudio automático. O interlúdio tem três pads de bateria sintetizados com Web Audio (bumbo, caixa e chimbal); cada clique ou ativação por teclado produz um som curto. Não foram inventados clientes, depoimentos, faixas ou resultados de projetos. O portfólio de áudio entra pela seção Ouça, quando houver faixas selecionadas pelo responsável.
+## Publicar uma obra
 
-## Adicionar faixas na seção Ouça
+Adicione um objeto em `assets/catalogo.json`. Campos:
 
-Cada faixa ganha uma capa gerada com as formas da marca, na cor do tipo (Jingle, Trilha ou Ambiente). Para usar uma capa própria, acrescente o campo `capa` com um caminho de imagem quadrada. Os atalhos do player são Espaço (toca e pausa) e as setas esquerda e direita (5 segundos).
-
-1. Coloque os arquivos em `assets/audio/`. Use MP3 (128 a 192 kbps) ou M4A; arquivos de até alguns MB carregam rápido. Evite WAV.
-2. Abra `assets/audio/faixas.js` e acrescente um bloco por faixa. O arquivo traz a explicação dos campos e um exemplo.
-3. Rode `npm run dev`, abra a página e toque as faixas para conferir. Depois `npm run build`.
-
-Enquanto a lista estiver vazia, o player mostra os seis esboços de exemplo (veja a seção de exemplos sonoros abaixo) com um aviso de que são esboços. Para ver o player em estado de espera, com o aviso e o link de contato, mude `window.FAIXAS_EXEMPLOS` para `false` em `assets/audio/faixas.js`. Nada toca sozinho: o áudio só começa quando a pessoa clica. A forma de onda é calculada no navegador a partir do próprio arquivo. Publique apenas faixas com autorização de divulgação.
-
-## Exemplos sonoros nos serviços
-
-Cada serviço (Jingles, Trilhas e Ambientes) tem uma área "Ouça como soa" com dois exemplos.
-
-- **Sem trabalhos publicados:** a página toca esboços curtos sintetizados no próprio navegador (Web Audio), só para mostrar o estilo de cada serviço, e avisa que não são trabalhos de clientes. Os esboços estão em `site.js`, no objeto `SKETCHES`, e os títulos e descrições em `EXEMPLOS`.
-- **Com trabalhos publicados:** se `assets/audio/faixas.js` tiver faixas com `categoria` igual a `Jingle`, `Trilha` ou `Ambiente`, as duas primeiras de cada categoria aparecem no lugar dos esboços, com o título e a descrição que você escreveu, e o aviso some. Categorias sem faixas continuam com os esboços.
-- **No player da seção Ouça:** os mesmos seis esboços aparecem como faixas (com os filtros Jingle, Trilha e Ambiente, forma de onda e barra de posição), marcadas como "esboço". Eles são gerados no navegador na primeira vez que a faixa é tocada. Quando você publicar a primeira faixa real, todos os esboços saem do player.
-- Só um áudio toca por vez. Começar um exemplo pausa o player da seção Ouça, e o contrário também. Nada toca sozinho.
-
-## SEO e indexação
-
-O endereço definido para o site é `https://sonora.abt.dev.br`. Ele continua com `noindex, nofollow` e `robots.txt` com `Disallow: /` até a publicação. O build decide isso por duas variáveis de ambiente (na Vercel, em Settings > Environment Variables):
-
-| Variável | Efeito |
+| Campo | Uso |
 | --- | --- |
-| `SITE_URL` | Endereço final, sem barra no fim. O padrão do build é `https://sonora.abt.dev.br`, então `canonical`, Open Graph, Twitter e JSON-LD já saem preenchidos. Com `SITE_URL=` vazia, essas tags saem do HTML. |
-| `INDEXAR=1` | Troca o robots para `index, follow`, gera `sitemap.xml` e `robots.txt` liberado. Exige `SITE_URL`. |
+| `slug` | Identificador único, letras minúsculas, números e hífens |
+| `estado` | `rascunho` ou `publicado` |
+| `titulo`, `descricao` | Nome e apresentação reais da obra |
+| `categoria` | `musica`, `audiovisual` ou `experimento` |
+| `capa`, `capaAlt` | Imagem local em `/assets/` e descrição acessível |
+| `ano` | Opcional, somente quando confirmado |
+| `destaque` | Opcional; seleciona para a home. Na ausência, entram as duas primeiras publicadas |
+| `audio`, `video` | Opcionais, arquivos locais em `/assets/` |
+| `contexto` | Lista opcional de parágrafos |
+| `creditos` | Lista opcional de objetos com `funcao` e `nome` |
+| `links` | Lista opcional de objetos com `titulo` e `url` HTTPS |
 
-Para testar a versão indexável localmente: `INDEXAR=1 npm run build` e conferir `dist/index.html`, `dist/robots.txt` e `dist/sitemap.xml`.
+A ordem da lista determina a ordem das obras. O catálogo só mostra projetos com `estado: publicado`; eles também ganham páginas estáticas próprias. Rascunhos não ganham páginas nem aparecem no JSON do build. **Arquivos dentro de `assets/` são públicos:** não coloque materiais confidenciais ou de rascunhos privados nessa pasta. Para publicações com vídeo, revise legendas, transcrição e audiodescrição conforme o conteúdo, antes de divulgar. Apenas publique materiais autorizados, com créditos e contexto do processo, incluindo ferramentas generativas quando aplicável.
 
-O que já está pronto: título e descrição próprios, `canonical`, Open Graph, Twitter Card, JSON-LD (Organization, WebSite e três Service, só com informações que já estão na página), `lang="pt-BR"`, um único `h1`, `alt` descritivo nas imagens de conteúdo, fontes com preload, cabeçalhos de cache em `vercel.json` e página `404.html`.
+Nenhuma mídia toca automaticamente. Áudio e vídeo usam `preload="none"`, e iniciar um pausa os demais. O build falha se uma obra publicada tiver arquivo ausente, campo obrigatório inválido ou URL insegura.
 
-A imagem de compartilhamento `assets/og-abt-sonora.png` (1200 por 630) e o `assets/apple-touch-icon.png` (180 por 180) são gerados a partir de `scripts/og-template.html` e `scripts/icon-template.html` com o Chrome em modo headless:
+## SEO
 
-```sh
-"/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless=new --hide-scrollbars --allow-file-access-from-files --force-device-scale-factor=1 --virtual-time-budget=4000 --screenshot="$PWD/assets/og-abt-sonora.png" --window-size=1200,630 "file://$PWD/scripts/og-template.html"
-```
+`SITE_URL` define a origem (padrão `https://sonora.abt.dev.br`). `INDEXAR=1` libera indexação e gera sitemap com home, catálogo, estúdio e obras publicadas. Sem a variável, `noindex` e `Disallow: /` permanecem. `SITE_URL=` remove metadados que exigem domínio; não pode ser combinado com `INDEXAR=1`. A página 404 sempre permanece `noindex`.
 
-Depois da publicação: cadastrar o domínio no Google Search Console e no Bing Webmaster Tools, enviar `sitemap.xml` e conferir o resultado com o teste de resultados avançados do Google. `identidade.html` e `logos.html` são páginas internas, com `noindex`, e podem ser removidas do build antes do lançamento.
+A imagem Open Graph vem de `scripts/og-template.html`; o ícone Apple vem de `scripts/icon-template.html`. O JSON-LD apresenta o estúdio e o site, sem serviços comerciais. Não há backend, CMS, autenticação, rastreadores ou integração com plataformas pagas.
 
-## Antes de publicar
+## Materiais anteriores
 
-Pesquisar disponibilidade do nome; apontar `sonora.abt.dev.br` para a hospedagem (registro CNAME no DNS de `abt.dev.br`, conforme a Vercel indicar); conferir serviços e contato; selecionar áudios autorizados para divulgação; preparar os termos de contratação e uso; revisar SEO e indexação. Não prometer exclusividade, cessão irrestrita ou direitos de utilização sem verificar a cadeia de direitos de cada peça.
+As imagens e scripts de demonstração antigos foram preservados como fontes locais. `sound-design.js` e os exemplos de `assets/audio/` não são carregados pelo novo site; os dois arquivos de configuração de demonstração não entram no build. Não são obras do catálogo.
 
-## Sound design e comparação antes/depois
+## Caderno de escuta provisório
 
-O quarto serviço apresenta efeitos, impactos, transições e texturas sonoras. O exemplo `#antes-depois`, dentro do próprio serviço de Sound design, permite alternar entre duas versões sem reiniciar o trecho, com pausa, retomada e uma posição compartilhada. A troca usa duas fontes no mesmo relógio Web Audio com transição suave de volume. Iniciar a comparação interrompe o player e os exemplos; iniciar outro áudio interrompe a comparação.
+O responsável autorizou exemplos provisórios. O estudo de síntese na home não representa um lançamento e não altera `assets/catalogo.json`. Nada toca automaticamente. Na primeira reprodução, três buffers são renderizados localmente; a troca usa ganhos no mesmo relógio de áudio. Há pausa, retomada, busca por teclado e mensagem de erro com nova tentativa. Os volumes médios são aproximados para a comparação. Mídias e estudo se interrompem mutuamente; ocultar ou sair da página pausa o estudo.
 
-Sem gravações publicadas, há um estudo de interface de oito segundos, sintetizado no navegador e identificado como demonstração. As duas versões compartilham os mesmos sinais; a segunda acrescenta movimentos, impactos e ressonâncias. Os volumes médios da demonstração são aproximados para reduzir a influência de volume na comparação. Não é um trabalho de cliente nem demonstração de restauração ou mixagem de uma gravação real.
+Gravações finais precisam ser alinhadas, autorizadas e revisadas antes da integração. Não cadastrar o exemplo sintetizado como obra publicada.
 
-Para publicar um par real:
+Lora: https://github.com/google/fonts/tree/main/ofl/lora. Fonte e licença locais, sem chamadas ao Google Fonts durante a visita.
 
-1. Coloque as versões autorizadas em `assets/audio/`, com o mesmo início e a mesma duração. Ajuste os volumes para uma comparação justa.
-2. Em `assets/audio/comparacao.js`, preencha `antes` e `depois` com os caminhos dos arquivos. Personalize título, descrição, rótulos e os momentos que devem aparecer na cena; use `momentos: []` se não houver marcações.
-3. Confira troca, pausa e avanço no navegador. Diferenças maiores que 0,15 segundo na duração dos arquivos são rejeitadas para evitar comparações desalinhadas.
+## Ícones, animações e opções de botão
 
-Para ocultar o estudo sintetizado sem publicar arquivos, defina `demo: false`. O HTML mantém um aviso quando não há suporte ao áudio. A implementação fica em `sound-design.js`; nada toca automaticamente.
+O rodapé usa a assinatura Sulco em vermelho, em `assets/abt-sonora-horizontal-vermelha.svg`, e não exibe o e-mail. O contato permanece na página Estúdio.
 
-A imagem principal de Sound design é uma fotografia conceitual de captação de efeitos, gerada com ImageGen e tratada com o mesmo filtro de duas cores das demais fotos de serviço. Os arquivos são `assets/img/servico-sound-design-720.webp` e `assets/img/servico-sound-design-1200.webp`; o prompt está em `docs/foto-sound-design.json`. A ilustração anterior do gravador permanece como detalhe de 52 a 68 pixels no cabeçalho da comparação.
+`botoes.html` é uma prancha local com cinco opções funcionais: Capa de disco, Fita de papel, Soul pill, Carimbo e Ingresso. Não entra no build público. Capa de disco está em uso nos botões principais e no player.
+
+Animações: entrada única de blocos ao rolar, chegada do selo, movimento das ilustrações no hover e elevação suave das polaroids. Sem JavaScript, o conteúdo permanece disponível; com `prefers-reduced-motion`, as animações ficam desativadas. Nenhuma biblioteca foi adicionada.
+
+Tipografia dos títulos e da navegação atualizada com Shrikhand e Caprasimo, em arquivos locais e licenças SIL OFL em `assets/fonts/`. Referências oficiais em https://github.com/google/fonts/tree/main/ofl/shrikhand e https://github.com/google/fonts/tree/main/ofl/caprasimo. O header usa moldura e faixas de cor, com menu recolhível no celular.

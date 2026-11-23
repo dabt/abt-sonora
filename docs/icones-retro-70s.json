@@ -1,0 +1,52 @@
+{
+  "date": "2026-11-23",
+  "method": "built-in image_gen",
+  "transparent_background": true,
+  "images": [
+    {
+      "name": "musica",
+      "prompt": "Use case: stylized-concept. Asset type: a single illustrated website icon, square composition, genuinely transparent background. Style: California 1970s independent record sleeve illustration, playful hand cut paper shapes and slightly imperfect two-color screen print registration, rich tactile ink grain inside the shapes, bold beautiful organic silhouettes, limited palette deep charcoal #222A2A, vermilion #EC4624, golden orange #F39120, muted aqua #4FBBBC, warm cream #E2DAC2. Flat illustration with subtle paper texture, no photorealism, no 3D, no drop shadow outside shape, no white square background, no lettering, no logos, no watermark, no border, no UI mockup. Center the icon with comfortable transparent margins, legible at 90px. Primary request: One expressive paired eighth musical note, slightly dancing, with rounded teardrop note heads and an orange-red arching connecting beam, a few small aqua rhythm marks; one coherent compact icon.",
+      "source": "/Users/davidabt/.codex/generated_images/01a1eab9-535a-7e00-9b54-1a6d6cddd01b/exec-c3db8f5f-b5ae-4d6d-b668-f67fa741787d.png",
+      "outputs": [
+        "/Users/davidabt/WebstormProjects/abt-sonora/assets/icons/retro-musica-200.webp",
+        "/Users/davidabt/WebstormProjects/abt-sonora/assets/icons/retro-musica-400.webp"
+      ]
+    },
+    {
+      "name": "audiovisual",
+      "prompt": "Use case: stylized-concept. Asset type: a single illustrated website icon, square composition, genuinely transparent background. Style: California 1970s independent record sleeve illustration, playful hand cut paper shapes and slightly imperfect two-color screen print registration, rich tactile ink grain inside the shapes, bold beautiful organic silhouettes, limited palette deep charcoal #222A2A, vermilion #EC4624, golden orange #F39120, muted aqua #4FBBBC, warm cream #E2DAC2. Flat illustration with subtle paper texture, no photorealism, no 3D, no drop shadow outside shape, no white square background, no lettering, no logos, no watermark, no border, no UI mockup. Center the icon with comfortable transparent margins, legible at 90px. Primary request: One charming vintage 1970s Super 8 movie camera in side profile, two circular film reels, short lens and small hand grip, charcoal body with aqua panels and warm orange-red reels. Bold stylized cut-paper shapes; one coherent compact icon.",
+      "source": "/Users/davidabt/.codex/generated_images/01a1eab9-535a-7e00-9b54-1a6d6cddd01b/exec-a23d86e3-3def-4047-a88d-c371ac0fd32b.png",
+      "outputs": [
+        "/Users/davidabt/WebstormProjects/abt-sonora/assets/icons/retro-audiovisual-200.webp",
+        "/Users/davidabt/WebstormProjects/abt-sonora/assets/icons/retro-audiovisual-400.webp"
+      ]
+    },
+    {
+      "name": "experimentos",
+      "prompt": "Use case: stylized-concept. Asset type: a single illustrated website icon, square composition, genuinely transparent background. Style: California 1970s independent record sleeve illustration, playful hand cut paper shapes and slightly imperfect two-color screen print registration, rich tactile ink grain inside the shapes, bold beautiful organic silhouettes, limited palette deep charcoal #222A2A, vermilion #EC4624, golden orange #F39120, muted aqua #4FBBBC, warm cream #E2DAC2. Flat illustration with subtle paper texture, no photorealism, no 3D, no drop shadow outside shape, no white square background, no lettering, no logos, no watermark, no border, no UI mockup. Center the icon with comfortable transparent margins, legible at 90px. Primary request: One beautiful analog open reel of audio recording tape, round dark charcoal reel with three cream rounded cutouts, warm rust-red center, a loose golden orange tape ribbon curling outward with a small aqua accent. One coherent compact icon.",
+      "source": "/Users/davidabt/.codex/generated_images/01a1eab9-535a-7e00-9b54-1a6d6cddd01b/exec-ec6e31dd-97a9-41b2-8969-740ab46a99aa.png",
+      "outputs": [
+        "/Users/davidabt/WebstormProjects/abt-sonora/assets/icons/retro-experimentos-200.webp",
+        "/Users/davidabt/WebstormProjects/abt-sonora/assets/icons/retro-experimentos-400.webp"
+      ]
+    },
+    {
+      "name": "sol",
+      "prompt": "Use case: stylized-concept. Asset type: a single illustrated website icon, square composition, genuinely transparent background. Style: California 1970s independent record sleeve illustration, playful hand cut paper shapes and slightly imperfect two-color screen print registration, rich tactile ink grain inside the shapes, bold beautiful organic silhouettes, limited palette deep charcoal #222A2A, vermilion #EC4624, golden orange #F39120, muted aqua #4FBBBC, warm cream #E2DAC2. Flat illustration with subtle paper texture, no photorealism, no 3D, no drop shadow outside shape, no white square background, no lettering, no logos, no watermark, no border, no UI mockup. Center the icon with comfortable transparent margins, legible at 90px. Primary request: One warm golden orange sun with a friendly abstract rust-red center and irregular alternating long and short rounded rays, two tiny aqua rays as accents; no human face. One coherent compact icon.",
+      "source": "/Users/davidabt/.codex/generated_images/01a1eab9-535a-7e00-9b54-1a6d6cddd01b/exec-dfc6f13f-18c9-4709-bef6-b1147792ce7b.png",
+      "outputs": [
+        "/Users/davidabt/WebstormProjects/abt-sonora/assets/icons/retro-sol-200.webp",
+        "/Users/davidabt/WebstormProjects/abt-sonora/assets/icons/retro-sol-400.webp"
+      ]
+    },
+    {
+      "name": "estrela",
+      "prompt": "Use case: stylized-concept. Asset type: a single illustrated website icon, square composition, genuinely transparent background. Style: California 1970s independent record sleeve illustration, playful hand cut paper shapes and slightly imperfect two-color screen print registration, rich tactile ink grain inside the shapes, bold beautiful organic silhouettes, limited palette deep charcoal #222A2A, vermilion #EC4624, golden orange #F39120, muted aqua #4FBBBC, warm cream #E2DAC2. Flat illustration with subtle paper texture, no photorealism, no 3D, no drop shadow outside shape, no white square background, no lettering, no logos, no watermark, no border, no UI mockup. Center the icon with comfortable transparent margins, legible at 90px. Primary request: One irregular eight-point retro starburst, curvy radiating rust-red arms with a small cream center and slightly offset golden orange cut-paper layer, one small aqua sparkle beside it. Not a Christmas star. One coherent compact icon.",
+      "source": "/Users/davidabt/.codex/generated_images/01a1eab9-535a-7e00-9b54-1a6d6cddd01b/exec-7213cee3-4b5b-45fe-a2a6-cc72a2cd806a.png",
+      "outputs": [
+        "/Users/davidabt/WebstormProjects/abt-sonora/assets/icons/retro-estrela-200.webp",
+        "/Users/davidabt/WebstormProjects/abt-sonora/assets/icons/retro-estrela-400.webp"
+      ]
+    }
+  ]
+}

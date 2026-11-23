@@ -2,12 +2,15 @@
   "name": "abt-sonora",
   "version": "0.1.0",
   "private": true,
-  "description": "Identidade e site da Abt Sonora, uma marca da Abt Tecnologia",
+  "description": "abt sonora — estúdio independente de música e experimentação audiovisual",
   "type": "module",
   "scripts": {
     "dev": "node scripts/serve.mjs",
-    "check": "node --check site.js && node --check sound-design.js && node --check scripts/build.mjs && node --check scripts/serve.mjs",
-    "build": "node scripts/build.mjs"
+    "check": "node --check site.js && node --check estudos.js && node --check scripts/catalogue.mjs && node --check scripts/build.mjs && node --check scripts/serve.mjs",
+    "build": "node scripts/build.mjs",
+    "test": "node --test scripts/catalogue.test.mjs"
   },
-  "engines": { "node": ">=20" }
+  "engines": {
+    "node": ">=20"
+  }
 }

@@ -1,122 +1,83 @@
-# Abt Sonora — base da marca
+# abt sonora — base da marca
 
-## Decisões do responsável
+Direção aprovada em 23/11/2026. Este documento substitui o posicionamento comercial anterior. Histórico de alterações preservado no Git.
 
-- Nome: Abt Sonora.
-- Relação: uma marca da Abt Tecnologia, ao lado do Abt Studio.
-- Atuação: jingles, sons e música ambiente, trilhas e faixas musicais. Não depende de shows ou atuação de palco.
-- Experiência: formação em produção musical e domínio do Ableton Live, informados pelo responsável.
-- Comunicação: apresentar o trabalho de produção musical; não posicionar a marca como um serviço de geração de música por IA.
-- Preferência visual: estúdio musical contemporâneo, escuro, tipografia forte e cor de destaque.
+## Nome e posicionamento
 
-## Posicionamento proposto
+**abt sonora**, sempre em minúsculas, inclusive nos títulos, descrições e créditos. Estúdio independente de música e experimentação audiovisual. Independência refere-se à direção artística; a associação à ABT Tecnologia permanece discreta.
 
-Produtora musical e sonora que transforma intenções de marcas e projetos em composições, timbres e atmosferas.
+Criamos composições, paisagens sonoras e trabalhos que exploram a relação entre som e imagem. O site apresenta pesquisa e obras autorais. Serviços, orçamentos, pacotes, briefing comercial e FAQ de contratação deixam de ser a proposta pública.
 
-**Descrição curta:** Produção musical e sonora.
+Assinatura: **Sound beyond boundaries.** O texto principal permanece em português brasileiro, com expressões curtas em inglês quando contribuírem para a marca.
 
-**Assinatura institucional:** Uma marca da Abt Tecnologia.
+## Campos
 
-**Frase de marca proposta:** Som com intenção.
+- Música: composições, faixas e identidades musicais.
+- Audiovisual: som e imagem pensados em conjunto.
+- Experimentos: estudos de textura, interação e movimento.
 
-**Mensagem principal do site:** Sua ideia. Em outra frequência.
+Rimehollow e Amberline são referências de projetos possíveis, não lançamentos confirmados. Não são exibidos no catálogo sem obras reais.
 
-**Apresentação:** Criamos jingles, trilhas e ambientes sonoros para marcas, conteúdos e experiências. Da direção musical à edição e à finalização, cada escolha acompanha a intenção do projeto.
+## Direção visual: California, lado B
 
-## Serviços iniciais
+Revisada a pedido do responsável em 23/11/2026. A direção escura e contida foi substituída pela atmosfera colorida de um estúdio californiano dos anos 70. Trata-se de uma referência estética, sem alegar sede na Califórnia ou fundação nos anos 70.
 
-1. Jingles e vinhetas: composições cantadas ou instrumentais; aberturas e encerramentos.
-2. Trilhas e faixas: composições para vídeos, apresentações e projetos autorais.
-3. Ambientes sonoros: música ambiente, texturas e paisagens sonoras para espaços e experiências.
+Paleta fornecida como referência: Iron Core #222A2A, Industrial Aqua #4FBBBC, Rust Signal #EC4624, Heat Marker #F39120 e Architectural Cream #E2DAC2. Creme ocupa o fundo principal; aqua, vermelho e âmbar têm áreas próprias. O título sobre creme usa vermelho escuro #A12D1B por contraste. Texto pequeno sobre vermelho usa #101716.
 
-Arranjo, edição e finalização são partes do processo. Mixagem e masterização avulsas não foram anunciadas como serviços sem confirmação do responsável.
+Logo Sulco preservado, nome sempre minúsculo. Shrikhand nas chamadas principais, Caprasimo nos títulos de seção e na navegação, Lora nos textos e Instrument Sans nos controles. Header alinhado, abertura como pôster, fotografias em polaroids, grafismos de fitas e capas, textura fina de papel, campos criativos coloridos. Sem ondas metálicas abstratas.
 
-## Identidade escolhida: Sulco
+Duas imagens editoriais geradas com a ferramenta integrada image_gen representam cenas imaginadas: sala de criação com palmeiras, luz dourada e equipamento analógico; gravador de fita e objetos de processo ao sol. Não documentam instalações reais ou obras publicadas. Arquivos WebP responsivos em `assets/img/california-*`; prompts e origens em `docs/imagens-california-70s.json`.
 
-A proposta 01 / Sulco foi escolhida pelo responsável em 17/11/2026. A assinatura combina Cochin Regular em caixa baixa, com espaçamento ajustado, e um símbolo de três sulcos circulares abertos em torno de um ponto. A proposta substitui o S contínuo com ponto da primeira versão.
+## Conteúdo e arquitetura
 
-Os SVGs aprovados em `assets/logo-exploracoes/sulco/` são os masters em curvas. `scripts/export-brand.py` aplica a paleta do site aos arquivos principais sem precisar das fontes originais. Cochin permanece na assinatura; a tipografia do site foi atualizada para Fraunces e Instrument Sans.
+Início, Trabalhos e Estúdio. Páginas de projeto são geradas a partir de `assets/catalogo.json`. Sem obras publicadas, apresentar estado vazio honesto; não criar lançamentos fictícios, contagens, canais ou botões sem destino. Sem Featured Work e Latest Works duplicados.
 
-Carvão #151718, Impulso #FF6B35, Marfim #F0EEE8, Alumínio #B3B5B0. Fundo secundário #202324. Em fundo claro, o destaque de texto usa #AA3512 para legibilidade. A aprovação da logo não alterou a paleta geral.
+Sem reprodução automática. Mídias só carregam após interação. Movimento reduzido, foco visível, links claros e navegação por teclado são requisitos da interface. Acessibilidade das obras deve ser avaliada a cada publicação.
 
-Aplicações atualizadas: cabeçalho, rodapé, favicon, símbolo do hero, selo do disco e prancha de identidade. A primeira identidade foi arquivada em `docs/arquivo-identidade-inicial/`. As propostas 02 e 03 continuam disponíveis na galeria de explorações.
+A bancada interna de produção é um projeto separado; não faz parte deste redesign. Nenhum backend, banco de dados, autenticação ou CMS foi adicionado.
 
-## Linguagem
+## Texturas, fotografias e polaroids
 
-Direta, sensorial e segura. Usar composição, timbre, ritmo, atmosfera, intenção e narrativa quando explicam o trabalho. Apresentar exemplos e decisões concretas. Evitar alegações de experiência, equipamentos, clientes e resultados não comprovados. Não prometer “livre de direitos”, “exclusiva” ou “registrada” sem base.
+Refinamento solicitado em 23/11/2026. A paleta é preservada. Fotografias ganham bordas claras, rodapé maior, sombras suaves, fita translúcida e pequenas rotações, como polaroids sobre uma mesa. A abertura combina duas fotos; o caderno editorial apresenta um piano ao sol, e a página Estúdio recebe uma pequena sequência de imagens. Todas são cenas conceituais.
 
-## Operação proposta
+Texturas locais distintas: papel com fibras nas molduras e áreas do catálogo; retícula em áreas editoriais e rodapé; trama de tecido nos campos criativos e bloco aqua. Granulação geral discreta. Arquivos SVG pequenos, repetíveis, sem dependências ou requisições externas.
 
-Briefing → direção musical → composição e produção → aprovação e ajustes → finalização e entrega.
+Ícones próprios em SVG: nota musical, câmera de filme, rolo de fita, estrela e sol. Usados como ilustrações decorativas, sem fingir controles clicáveis. Header permanece alinhado e o catálogo continua vazio. As novas imagens, prompts e destinos estão em `docs/imagens-polaroids-70s.json`.
 
-Cada orçamento deve definir duração, versões, letra e voz, revisões, prazo, materiais do cliente, canais de utilização, território e período quando aplicáveis, arquivos entregues e condições de licenciamento. Essas condições dependem da produção e devem ser verificadas caso a caso.
+## Tipografia de leitura e caderno de escuta
 
-## Pendências para lançamento
+Refinamento de 23/11/2026: Lora passa a compor os textos de leitura; Instrument Sans permanece nos controles e na navegação. Arquivo local obtido do repositório oficial Google Fonts, com licença SIL OFL. Fraunces permanece nos títulos.
 
-As definições comerciais, preços, domínio e registro do nome não foram concluídos. A direção visual Sulco está escolhida. Não há portfólio de áudio fictício: as gravações serão fornecidas ou selecionadas pelo responsável. Não houve publicação, commit ou push neste projeto.
+O responsável autorizou estudos provisórios. A home apresenta um motivo musical de 12 segundos nos arranjos Essência, Pulso e Horizonte. Eles compartilham melodia, duração e posição. O exemplo é identificado como demonstração e não entra no catálogo de obras.
 
-## Direção visual do site: Cor de capa de disco
+Os textos explicam decisões de composição, arranjo, timbre, silêncio e edição. A página Estúdio utiliza a formação em produção musical e o trabalho com Ableton Live informados pelo responsável, sem inventar equipe, equipamentos próprios, prêmios ou histórico.
 
-Substitui a exploração Matéria em vibração (papel, vinho e verde). Pedido do responsável: mais ousada e colorida, com personalidade e sem repetir o estilo do Abt Studio. O Studio usa fundo violeta escuro, azul-violeta #4521F5, lima #D8FF3D, vermelhão #FF4B1F, rosa #FFA6E3, creme #F5EFE3 e as fontes Dela Gothic One e Martian Mono. Por isso a Sonora não usa azul, rosa, lima nem violeta.
+## Mais cor e ilustrações de época
 
-Paleta: Tinta #151718, Pêssego #FFE5CF, Sol #FFC629, Laranja #FF6B35 (o laranja da logo), Verde #00B87C e Céu #8ED8F8. Cada seção ocupa uma cor cheia: amarelo na abertura e no contato, laranja no ritmo, verde na escuta, pêssego nos serviços, tinta no estúdio, no processo e nas perguntas, céu no briefing. Texto em tinta sobre as cores claras e em pêssego sobre a tinta.
+Refinamento solicitado em 23/11/2026: logo Sulco vermelha no rodapé, sem e-mail nessa área. Blocos aqua e âmbar ampliados na abertura, na escuta, no catálogo e no rodapé, preservando o contraste do texto.
 
-Tipografia: Fraunces 800 e 900 (com itálico) nos títulos e Instrument Sans no texto. Sem legendas em caixa alta, numeração de seções ou setas decorativas.
+Cinco ilustrações geradas substituem os ícones de traço: nota musical, câmera, rolo de fita, sol e estrela, com recorte e textura de impressão dos anos 70. As imagens são decorativas e mantêm a transparência. Os ícones vetoriais anteriores permanecem arquivados.
 
-Botões e selos: botão adesivo (tinta com texto amarelo, borda grossa e sombra laranja dura que afunda ao passar o mouse) e selo adesivo (etiqueta colorida inclinada em 3 graus, com borda e sombra dura). A cor do selo muda por seção.
+Cinco opções de botão estão em `botoes.html`, uma prancha local. A opção Capa de disco foi aplicada provisoriamente; não se presume uma escolha definitiva. Animações discretas respeitam movimento reduzido e não reproduzem áudio automaticamente.
 
-Abertura: título gigante em tinta, selo "Em outra" em tinta e sublinhado ondulado, cartão verde inclinado com a imagem do campo sonoro, sem as linhas por cima, anéis laranja do símbolo Sulco, meio círculo verde, círculo céu. Não há faixa em movimento.
+## Rodapé e botão mantido
 
-Contato: título grande à esquerda e, à direita, um cartão de tinta reto com sombra laranja, o e-mail em destaque, um botão que copia o endereço (só aparece em navegadores com suporte) e três dicas do que contar no primeiro e-mail.
+Após retorno positivo, o botão Capa de disco permanece em uso. O rodapé foi revisto: assinatura Sulco pequena em vermelho, papel claro, frase “A escuta continua”, navegação essencial e ABT Tecnologia integrada ao crédito de copyright. Sai a frase “Parte do universo ABT”. O e-mail continua fora do rodapé.
 
-Estrutura das seções: para fugir do roteiro de selo no topo, título grande e texto, os selos saíram de cima dos títulos. Hoje o selo aparece como adesivo sobre outros elementos (canto do cartão do hero, canto do cartão de contato). "Feito para ser ouvido." ocupa a largura toda acima do player, e o tema de cada serviço virou uma frase em itálico sob o título.
+A pedido do responsável, foi removida do caderno a frase “As fotografias são cenas imaginadas para a identidade visual do estúdio”. A origem e os prompts dos assets continuam documentados nos arquivos internos.
 
-Listas: "Serve para" e "Pode incluir" viram etiquetas (as de "Pode incluir" preenchidas na cor do selo); o briefing vira cartões coloridos com borda e sombra; o processo ganha uma linha do tempo pontilhada com círculos coloridos; as perguntas frequentes viram uma conversa dentro de uma janela de chat reta com sombra laranja, com a pergunta em balão colorido à direita e a resposta em balão escuro à esquerda, com o símbolo Sulco como avatar. Todas as respostas ficam visíveis, sem sanfona.
 
-Rodapé: logo e assinatura, lista de navegação com bolinhas coloridas, e-mail em destaque, link para o Abt Studio, botão adesivo "Voltar ao topo" e a frase "Som com intenção." gigante em amarelo, cortada na borda, sobre anéis do símbolo Sulco em cinza escuro.
+### Tipografia e header com referências dos anos 70
 
-Links, menu e texturas: os links não usam mais o sublinhado reto do navegador, e sim um traço de pincel afilado e levemente irregular (SVG em `styles.css`), que cresce ao passar o mouse. No celular o cabeçalho tem o botão Menu, que abre um painel escuro com todos os links; ele fecha ao escolher um link ou com Esc. As texturas aparecem só em algumas seções e são diferentes entre si: pontos de retícula no ritmo, ondas na escuta, quadriculado no briefing, pontilhado nas áreas escuras e grão de papel no rodapé. O hero não tem textura nem animação.
+Shrikhand nas chamadas principais e no fechamento, Caprasimo nos títulos de seção e na navegação. As duas fontes usam arquivos locais e licenças SIL OFL preservadas em assets/fonts. Lora mantém a leitura e Fraunces permanece nas legendas das polaroids. A assinatura Sulco continua em curvas.
 
-Sombra dura: voltou em tudo (botões, selos, etiquetas, cartão do hero, cartões do briefing, janela de chat e cartão de contato), porque dá personalidade. Os cartões grandes de contato, chat e briefing ficam retos, sem inclinação. O processo e as áreas escuras mantêm a linha do tempo com círculos duplos e o pontilhado. Fotos em duas cores e desenhos recortados (pandeiro, fones e cassete) ficam juntos no site.
+O header mantém os elementos alinhados, com moldura, sombra de impressão, faixas vermelha, laranja e aqua e navegação arredondada. A descrição central aparece nas telas largas; no celular, o menu recolhível preserva o espaço da marca.
 
-Imagens: as fotos conceituais entram em duas cores por filtro SVG (sombra saturada, luz clara), recortadas em arco, círculo e elipse. Os círculos abertos do símbolo Sulco voltam como grafismo grande na abertura e no contato (`assets/img/sulcos.svg`, aplicado como máscara).
+Fontes oficiais consultadas
+- https://github.com/google/fonts/tree/main/ofl/shrikhand
+- https://github.com/google/fonts/tree/main/ofl/caprasimo
 
-A logo Sulco foi mantida exatamente como aprovada, nas cores originais (#F0EEE8, #151718 e #FF6B35).
 
-### Ilustrações complementares
+### K7 do caderno de escuta
 
-Três recortes com textura de papel e impressão, gerados com ImageGen na mesma paleta: pandeiro no estudo de ritmo, fones na escuta e fita cassete com lápis no briefing. Os WebP têm transparência preservada e versões de 400 e 720 px. Complementam as imagens em duas cores sem alterar a direção Cor de capa de disco, as fontes ou os componentes definidos pelo responsável. Os prompts estão em `docs/ilustracoes-complementares.json`.
-
-### Hero simplificado — experimento de composição
-
-Mensagem e imagem em colunas separadas, sem sobreposição. Foram retirados os círculos verde e céu e a etiqueta sobre a imagem; os sulcos laranja ficam discretos na lateral direita. O título mantém Fraunces e o sublinhado ondulado. O cartão tem rotação de dois graus e não usa sombra pesada. Texto de apoio e um único botão ficam agrupados. Em celular, a imagem vem depois do texto, com recorte mais horizontal. Esta versão é um experimento para avaliação do responsável.
-
-## SEO
-
-Título "Abt Sonora | Jingles, trilhas e música ambiente para marcas" e descrição própria. Palavras que a marca quer ser encontrada por: jingle, vinheta, trilha para vídeo, música ambiente, produção musical. O `h1` visual é "Sua ideia. Em outra frequência." e leva, para leitores de tela e buscadores, a frase oculta "Abt Sonora, produção musical e sonora.". Os dados estruturados só citam o que está na página, sem endereço, telefone, clientes ou avaliações, que não existem. O endereço do site é sonora.abt.dev.br (subdomínio de abt.dev.br, ao lado de studio.abt.dev.br). Detalhes técnicos e variáveis de build estão no README.
-
-## Exemplos sonoros nos serviços
-
-Cada serviço mostra dois exemplos para o visitante entender o que seria. Como ainda não há faixas publicadas, são esboços sintetizados no navegador (vinheta de abertura e assinatura de anúncio para jingles, base suave para fala e cena em movimento para trilhas, textura de loja e paisagem sonora para ambientes), identificados na página como esboços de estilo e não como trabalhos de clientes, para respeitar a regra de não inventar portfólio. Quando houver faixas reais em `assets/audio/faixas.js`, elas substituem os esboços da categoria correspondente.
-
-O player da seção Ouça também mostra os seis esboços enquanto não há faixas reais, com a etiqueta "esboço" e o aviso de que servem só para ver como o player vai ficar. Ao publicar a primeira faixa real, os esboços saem do player; o interruptor `FAIXAS_EXEMPLOS` em `assets/audio/faixas.js` desliga os esboços.
-
-## Player da seção Ouça
-
-Redesenhado como vitrine. Um cartão largo de "tocando agora" com capa grande, selo da categoria, título, descrição, painel escuro com a forma de onda, controles e volume. Cada tipo de trabalho tem uma cor (Jingle amarelo, Trilha laranja, Ambiente azul-céu) que muda o botão de play, a forma de onda, o selo e o fundo do cartão da faixa. As capas são geradas com as formas da marca, uma por faixa, e uma capa própria (campo `capa` em `assets/audio/faixas.js`) tem prioridade. Enquanto toca, a capa pulsa com a intensidade da faixa naquele ponto (desligado com prefers-reduced-motion).
-
-Abaixo do player, abas por tipo com contagem (Todas, Jingles, Trilhas e Ambientes, só quando há mais de um tipo) e a lista de faixas em cartões com capa, descrição, duração e uma barra de progresso na faixa atual.
-
-UX: clicar ou arrastar na onda pula para o ponto e já começa a tocar; passar o mouse mostra o tempo; Espaço (ou K) toca e pausa e as setas pulam 5 segundos; o volume é lembrado entre visitas; a faixa seguinte toca sozinha ao terminar; a forma de onda dos esboços aparece antes do play.
-
-## Hero
-
-Disco de anéis. A imagem em duas cores fica num círculo grande, cercado por anéis laranja e amarelo que lembram os sulcos do símbolo, com um círculo azul-céu sobreposto. O título e o botão ficam à esquerda. Não há selo, movimento, textura, notas nem linhas de som. No celular o disco desce para baixo do botão, com anéis mais finos. Foram avaliadas também uma versão com tipografia gigante e uma com três recortes dos serviços (arco, círculo e pílula); a terceira continua sendo uma boa opção se for preciso mostrar os serviços já na primeira tela. Um cartão no estilo do player também foi testado e descartado.
-
-## Sound design e antes/depois
-
-Sound design entra como serviço próprio: criação e edição de efeitos, impactos, transições e texturas para vídeos, animações e interfaces. A página inclui uma comparação sincronizada entre sinal simples e camadas de sound design. O estudo inicial é sintetizado no navegador e identificado como demonstração, sem atribuição a cliente ou promessa de resultado em gravação real. Pares de áudio autorizados podem substituir o estudo em `assets/audio/comparacao.js`.
-
-### Sound design integrado ao serviço
-
-O antes/depois passa a integrar o próprio bloco de Sound design, na posição dos exemplos sonoros dos outros serviços. A seção independente foi removida. A imagem principal agora é fotográfica e recebe o mesmo tratamento de duas cores das demais imagens dos serviços. A ilustração de papel recortado do gravador aparece apenas como detalhe no cabeçalho do exemplo.
+Fotografia conceitual gerada com image_gen e fundo transparente, em duas resoluções WebP. Etiqueta abt sonora e faixas nas cores do site. Os miolos dos carretéis são recortes circulares da própria fotografia em CSS. A rotação só ocorre durante a reprodução, pausa preserva o ângulo e movimento reduzido desativa a animação. Prompt, origem e arquivos em docs/imagem-k7.json.

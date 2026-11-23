@@ -1,0 +1,24 @@
+{
+  "date": "2026-11-23",
+  "method": "built-in image_gen",
+  "note": "Fotografias conceituais geradas sem moldura. Molduras, texturas, fita e ícones são HTML/CSS/SVG locais. As cenas não documentam instalações reais.",
+  "images": [
+    {
+      "name": "california-palms",
+      "prompt": "Use case: historical-scene. Asset type: square editorial photograph to be placed inside a CSS Polaroid frame on an independent music studio website. Primary request: a beautiful candid 1970s California late afternoon, tall palm trees seen from the garden of a small wood-clad creative bungalow, a turquoise painted door frame at the left edge, soft warm orange light on terracotta patio tiles and a cream linen curtain fluttering slightly, a glimpse of dry hills in distance, human intimate Laurel Canyon atmosphere, slightly imperfect off-center composition, no people. Authentic analog color film with tactile fine grain, gentle light leaks only at far edges, warm faded colors, natural shadows, evocative rather than polished real-estate photography. Palette cream #E2DAC2, aqua #4FBBBC, amber #F39120, rust #EC4624, deep green #222A2A. Full-bleed image only: DO NOT include a photo border, frame, paper, lettering, logos, watermarks, or a website mockup. No modern cars, digital devices, neon or CGI. A conceptual imagined scene, not documentation of any business or actual named location.",
+      "source": "/Users/davidabt/.codex/generated_images/01a1eab9-535a-7e00-9b54-1a6d6cddd01b/exec-4ff88898-d895-47d6-9244-2b25113b1925.png",
+      "outputs": [
+        "/Users/davidabt/WebstormProjects/abt-sonora/assets/img/california-palms-640.webp"
+      ]
+    },
+    {
+      "name": "california-keys",
+      "prompt": "Use case: historical-scene. Asset type: square editorial photograph to be placed inside a CSS Polaroid frame for a 1970s California music studio website. Primary request: a spontaneous close-up of the worn ivory keys and walnut body of an unbranded 1970s electric piano in a sun-filled home recording studio, a pair of vintage ochre padded headphones resting across one corner, loosely folded aqua linen in the background, warm honey sunlight across the keys, an orange guitar cable curving out of frame. Close intimate analog music magazine photograph, fine 35mm film grain, naturally faded pigments, imperfect focus falloff, rich tactile wood and fabric, slight asymmetry, soulful and relaxed rather than glossy commercial equipment photography. Color palette cream #E2DAC2, aqua #4FBBBC, amber #F39120, rust #EC4624, charcoal #222A2A. No people, no text or readable labels, no logos, no watermark, no modern digital displays, no abstract soundwave sculptures, no CGI. Full-bleed photograph only, DO NOT generate a Polaroid border or frame; the website supplies it. Conceptual scene, not a real studio's premises.",
+      "source": "/Users/davidabt/.codex/generated_images/01a1eab9-535a-7e00-9b54-1a6d6cddd01b/exec-cbe0ff8e-89b6-4c50-88c5-06c881d2eb65.png",
+      "outputs": [
+        "/Users/davidabt/WebstormProjects/abt-sonora/assets/img/california-keys-960.webp",
+        "/Users/davidabt/WebstormProjects/abt-sonora/assets/img/california-keys-640.webp"
+      ]
+    }
+  ]
+}
