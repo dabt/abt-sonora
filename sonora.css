@@ -330,6 +330,10 @@ body:has(.record-player.is-playing) .hero-wave { animation: wave-level .85s ease
 .work-card :is(.work-card-meta, h3, p) { margin-inline: 1.4rem; }
 .work-card-meta { display: flex; flex-wrap: wrap; justify-content: space-between; gap: .6rem; margin-block: .9rem .55rem; color: var(--sunset); font-size: .875rem; }
 .project { margin-block: clamp(2rem, 5vw, 5.5rem) var(--section-gap); }
+.project-breadcrumb ol { display: flex; flex-wrap: wrap; gap: .25rem .65rem; margin: 0; padding: 0; list-style: none; color: var(--muted); font-size: .9rem; }
+.project-breadcrumb li + li::before { content: '/'; margin-right: .65rem; color: var(--sunset); }
+.project-breadcrumb a { text-decoration: underline; text-underline-offset: .18em; }
+.project-breadcrumb a:hover { color: var(--sand); }
 .project-header { margin-block: 2rem; }
 .project-header h1 { font-size: clamp(2.7rem, 6.5vw, 6.4rem); }
 .project-cover { width: 100%; max-height: 41rem; object-fit: cover; border-radius: var(--radius); }

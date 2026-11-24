@@ -2,7 +2,8 @@ import { createServer } from 'node:http';
 import { readFile, stat } from 'node:fs/promises';
 import { resolve, extname, sep } from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { loadCatalogue, published, renderCatalogue, renderProject, applySeo } from './catalogue.mjs';
+import { loadCatalogue, published, renderCatalogue, renderProject } from './catalogue.mjs';
+import { applySeo } from './seo.mjs';
 const rootUrl = new URL('../', import.meta.url);
 const root = resolve(fileURLToPath(new URL('../', import.meta.url)));
 const types = {
@@ -13,23 +14,33 @@ const types = {
 const port = Number(process.env.PORT || 4322);
 createServer(async (req,res) => {
   try {
-    const path = decodeURIComponent(new URL(req.url, 'http://localhost').pathname);
+    const requestUrl = new URL(req.url, 'http://localhost');
+    const path = decodeURIComponent(requestUrl.pathname).replace(/\/{2,}/g, '/');
+    function redirect(canonical) {
+      const encoded = canonical.split('/').map(encodeURIComponent).join('/');
+      res.writeHead(308, { Location: encoded + requestUrl.search });
+      res.end();
+    }
     let file = resolve(root, '.' + path);
     if (file !== root && !file.startsWith(root + sep)) throw new Error('Forbidden');
     const info = await stat(file).catch(() => null);
     if (info?.isDirectory()) {
-      if (!path.endsWith('/')) { res.writeHead(308, { Location: path + '/' }); return res.end(); }
+      if (!path.endsWith('/')) return redirect(path + '/');
       file = resolve(file, 'index.html');
     }
     let body;
-    if (/^\/projetos\/[a-z0-9-]+\/$/.test(path)) {
-      const project = published(await loadCatalogue(rootUrl)).find(item => path === `/projetos/${item.slug}/`);
+    const projectRoute = /^\/projetos\/([a-z0-9-]+)(?:\/(?:index\.html)?)?$/.exec(path);
+    if (projectRoute) {
+      const project = published(await loadCatalogue(rootUrl)).find(item => item.slug === projectRoute[1]);
       if (!project) throw new Error('Not found');
-      body = Buffer.from(applySeo(renderProject(await readFile(new URL('scripts/project-template.html', rootUrl), 'utf8'), project), ''));
+      const canonical = `/projetos/${project.slug}/`;
+      if (path !== canonical) return redirect(canonical);
+      body = Buffer.from(applySeo(renderProject(await readFile(new URL('scripts/project-template.html', rootUrl), 'utf8'), project)));
       file = resolve(root, 'index.html');
     } else {
       body = await readFile(file);
-      if (extname(file) === '.html') body = Buffer.from(applySeo(renderCatalogue(body.toString(), await loadCatalogue(rootUrl)), ''));
+      if (path.endsWith('/index.html')) return redirect(path.slice(0, -'index.html'.length));
+      if (extname(file) === '.html') body = Buffer.from(applySeo(renderCatalogue(body.toString(), await loadCatalogue(rootUrl))));
     }
     const headers = {'Content-Type': types[extname(file)] || 'application/octet-stream', 'Accept-Ranges': 'bytes'};
     // Áudio precisa de requisições parciais para o navegador permitir avançar e voltar dentro da faixa.
@@ -45,6 +56,6 @@ createServer(async (req,res) => {
     res.end(body);
   } catch {
     res.writeHead(404, { 'Content-Type': 'text/html; charset=utf-8' });
-    res.end(await readFile(new URL('404.html', rootUrl), 'utf8').then(html => applySeo(html, '')).catch(() => 'Página não encontrada'));
+    res.end(await readFile(new URL('404.html', rootUrl), 'utf8').then(html => applySeo(html)).catch(() => 'Página não encontrada'));
   }
 }).listen(port, '127.0.0.1', () => console.log(`Local: http://127.0.0.1:${port}`));

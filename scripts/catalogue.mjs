@@ -68,13 +68,3 @@ export function renderProject(template, project) {
   // One replacement pass prevents user content from being interpreted as template tokens.
   return template.replace(/\{\{(TITLE|DESCRIPTION|SLUG|CATEGORY_YEAR|MEDIA|CONTEXT|CREDITS|LINKS)\}\}/g, (_, key) => blocks[key]);
 }
-
-export function applySeo(html, siteUrl, indexar = false) {
-  if (siteUrl) {
-    const url = new URL(siteUrl);
-    if (!['http:', 'https:'].includes(url.protocol) || url.search || url.hash || url.username || url.password || url.pathname !== '/') throw new Error('SITE_URL deve ser uma origem HTTP(S), sem caminho, consulta ou credenciais.');
-    html = html.replace(/<!--seo-->|<!--\/seo-->/g, '').replaceAll('{{SITE_URL}}', siteUrl.replace(/\/+$/, ''));
-  } else html = html.replace(/\s*<!--seo-->[\s\S]*?<!--\/seo-->/g, '');
-  if (indexar) html = html.replace('content="noindex, nofollow"', 'content="index, follow, max-image-preview:large"');
-  return html;
-}

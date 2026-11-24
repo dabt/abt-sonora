@@ -68,9 +68,13 @@ Nenhuma mídia toca automaticamente. Áudio e vídeo usam `preload="none"`, e in
 
 ## SEO
 
-`SITE_URL` define a origem (padrão `https://sonora.abt.dev.br`). `INDEXAR=1` libera indexação e gera sitemap com home, catálogo, playlists, estúdio e obras publicadas. Sem a variável, `noindex` e `Disallow: /` permanecem. `SITE_URL=` remove metadados que exigem domínio; não pode ser combinado com `INDEXAR=1`. A página 404 sempre permanece `noindex`.
+`SITE_URL` define a origem canônica. Quando essa variável está ausente, o build usa o domínio de produção informado pela Vercel ou `https://sonora.abt.dev.br`. A Vercel libera a indexação nos builds de produção. Defina `INDEXAR=0` para manter uma publicação fora da busca. Em outros provedores, use `INDEXAR=1` com a origem de produção. `SITE_URL=` remove os metadados que exigem domínio.
 
-A imagem Open Graph e o ícone Apple usam a assinatura atual em `assets/identidade/`. O JSON-LD descreve o estúdio e o site.
+Prévias e builds locais padrão usam `noindex` e omitem o sitemap. Seu `robots.txt` permite o acesso às páginas para que os buscadores leiam o `noindex`. A 404 sempre usa `noindex` e fica fora do sitemap.
+
+O sitemap de produção lista as quatro páginas principais e as obras publicadas. Títulos e descrições de compartilhamento são derivados do HTML. Cada ficha de projeto usa a própria capa e a mesma trilha de navegação no HTML e no JSON-LD. A home identifica o site e o estúdio no JSON-LD.
+
+Para validar uma versão indexável localmente, execute `SITE_URL=https://sonora.abt.dev.br INDEXAR=1 npm run build` e confira `dist/robots.txt` e `dist/sitemap.xml`. Depois que o domínio responder com a versão publicada, envie `sitemap.xml` no Google Search Console e confira a home na ferramenta de inspeção de URL.
 
 ## Reprodução e movimento
 
