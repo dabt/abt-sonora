@@ -15,8 +15,8 @@ for (const project of works) for (const field of ['capa', 'audio', 'video']) {
 }
 await rm(dist, { recursive: true, force: true });
 await mkdir(dist, { recursive: true });
-for (const file of ['styles.css', 'site.js', 'estudos.js', 'assets']) await cp(new URL(file, root), new URL(file, dist), { recursive: true });
-const pages = ['index.html', 'trabalhos/index.html', 'estudio/index.html', '404.html'];
+for (const file of ['sonora.css', 'player.css', 'site.js', 'logo.js', 'estudos.js', 'player.js', 'assets']) await cp(new URL(file, root), new URL(file, dist), { recursive: true });
+const pages = ['index.html', 'trabalhos/index.html', 'playlists/index.html', 'estudio/index.html', '404.html'];
 async function writePage(path, html) {
   const target = new URL(path, dist);
   await mkdir(new URL('./', target), { recursive: true });
@@ -31,7 +31,7 @@ await rm(new URL('assets/audio/faixas.js', dist), { force: true });
 await rm(new URL('assets/audio/comparacao.js', dist), { force: true });
 await writeFile(new URL('robots.txt', dist), indexar ? `User-agent: *\nAllow: /\n\nSitemap: ${siteUrl}/sitemap.xml\n` : 'User-agent: *\nDisallow: /\n');
 if (indexar) {
-  const paths = ['/', '/trabalhos/', '/estudio/', ...works.map(project => `/projetos/${project.slug}/`)];
+  const paths = ['/', '/trabalhos/', '/playlists/', '/estudio/', ...works.map(project => `/projetos/${project.slug}/`)];
   await writeFile(new URL('sitemap.xml', dist), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${paths.map(path => `  <url><loc>${escapeHtml(siteUrl + path)}</loc></url>`).join('\n')}\n</urlset>\n`);
 }
 console.log(`abt sonora: ${pages.length + works.length} páginas em dist/. ${works.length} obras publicadas. Indexação ${indexar ? 'liberada' : 'bloqueada'}.`);

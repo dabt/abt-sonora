@@ -16,7 +16,56 @@ if (toggle) {
   document.addEventListener('keydown', event => {
     if (event.key === 'Escape' && header.classList.contains('is-open')) { setOpen(false); toggle.focus(); }
   });
-  window.matchMedia('(min-width: 761px)').addEventListener('change', () => setOpen(false));
+  window.matchMedia('(max-width: 870px)').addEventListener('change', () => setOpen(false));
+}
+
+const studioIndex = document.querySelector('.studio-index');
+if (studioIndex) {
+  const syncLocation = () => studioIndex.querySelectorAll('a').forEach(link => {
+    if (link.hash === location.hash) link.setAttribute('aria-current', 'location');
+    else link.removeAttribute('aria-current');
+  });
+  window.addEventListener('hashchange', syncLocation);
+  syncLocation();
+}
+
+const shelf = document.querySelector('[data-collection]');
+if (shelf) {
+  const windowEl = shelf.querySelector('[data-collection-window]');
+  const cards = [...shelf.querySelectorAll('.collection-card')];
+  const previous = shelf.querySelector('[data-previous]');
+  const next = shelf.querySelector('[data-next]');
+  const status = shelf.querySelector('[data-collection-status]');
+  const controls = shelf.querySelector('[data-collection-controls]');
+  const tolerance = 2;
+  const maxScroll = () => windowEl.scrollWidth - windowEl.clientWidth;
+
+  function syncArrows() {
+    const max = maxScroll();
+    controls.hidden = max <= tolerance;
+    previous.setAttribute('aria-disabled', String(windowEl.scrollLeft <= tolerance));
+    next.setAttribute('aria-disabled', String(windowEl.scrollLeft >= max - tolerance));
+  }
+
+  function step(direction) {
+    const position = windowEl.scrollLeft;
+    const left = windowEl.getBoundingClientRect().left + parseFloat(getComputedStyle(windowEl).paddingLeft);
+    const max = maxScroll();
+    const offsets = cards.map(card => Math.max(0, Math.min(max, position + card.getBoundingClientRect().left - left)));
+    const target = direction > 0
+      ? offsets.findIndex(offset => offset > position + tolerance)
+      : offsets.findLastIndex(offset => offset < position - tolerance);
+    if (target < 0) return;
+    windowEl.scrollTo({ left: offsets[target] });
+    status.textContent = cards[target].querySelector('strong').textContent;
+  }
+
+  previous.addEventListener('click', () => step(-1));
+  next.addEventListener('click', () => step(1));
+  windowEl.addEventListener('scroll', syncArrows, { passive: true });
+  if ('ResizeObserver' in window) new ResizeObserver(syncArrows).observe(windowEl);
+  else window.addEventListener('resize', syncArrows);
+  syncArrows();
 }
 
 const filters = document.querySelector('[data-filters]');

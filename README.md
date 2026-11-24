@@ -1,6 +1,6 @@
-# abt sonora
+# ABT Sonora
 
-Estúdio independente de música e experimentação audiovisual. Reposicionamento aprovado em 23/11/2026. O nome é sempre escrito em minúsculas.
+Estúdio criativo independente de música, paisagens sonoras e experimentação audiovisual. A identidade de 24/11/2026 aplica o painel ABT Sonora e a composição do Estúdio Sonoro ao Pôr do Sol.
 
 ## Desenvolvimento
 
@@ -13,23 +13,36 @@ npm test
 npm run build
 ```
 
-Prévia: http://127.0.0.1:4322/. O build estático sai em `dist/`; `vercel.json` mantém a configuração de hospedagem. Não houve publicação nesta etapa. O ambiente de produção e o domínio não foram verificados.
+A prévia de desenvolvimento abre em http://127.0.0.1:4322/. O build estático sai em `dist/`. A configuração de hospedagem está em `vercel.json`.
 
 ## Estrutura
 
-- `index.html`: abertura, seleção de obras, campos de exploração e apresentação editorial.
+- `index.html`: abertura, navegação pelas coleções, player de escuta, laboratório de arranjo e seleção de projetos.
 - `trabalhos/index.html`: catálogo com estado vazio e filtros quando houver mais de uma categoria publicada.
-- `estudio/index.html`: visão, processo e contato institucional.
+- `playlists/index.html`: Ambientes, Cinemáticas, Natureza e Foco, com controles compactos e prévias demonstrativas em `assets/audio/escutas/`.
+- `estudio/index.html`: apresentação, processo e contato.
 - `scripts/project-template.html`: modelo para páginas individuais, geradas em `/projetos/<slug>/`.
 - `scripts/catalogue.mjs`: valida dados, renderiza obras e prepara metadados. Compartilhado entre desenvolvimento e build.
 - `assets/catalogo.json`: fonte local do catálogo, inicialmente vazia.
-- `site.js`: menu responsivo, filtros e coordenação de mídias com controles nativos.
+- `site.js`: menu responsivo, navegação pelas coleções, filtros e coordenação da reprodução.
+- `logo.js`: iluminação e ondulação do símbolo em WebGL, com a assinatura estática disponível quando o efeito está desativado.
 - `estudos.js`: estudo demonstrativo de 12 segundos, em três arranjos sincronizados, iniciado somente após clique.
-- `assets/fonts/lora-variable.ttf`: fonte de leitura Lora, com licença SIL OFL em `assets/fonts/OFL-lora.txt`.
-- `styles.css`: tokens e estilos da direção California, lado B.
-- `identidade.html` e `logos.html`: referências internas, disponíveis localmente e excluídas do build público.
+- `player.js` e `player.css`: controles das prévias, fila da vitrola, pausa compacta e espectro radial alimentado por Web Audio.
+- `sonora.css`: paleta, tipografia, layout responsivo e transições.
+- `assets/identidade/`: assinaturas extraídas do painel original, fotos WebP, ícones e imagem de compartilhamento.
+- `identidade.html`: prancha local da identidade. `logos.html`, `botoes.html` e `styles.css` preservam os estudos anteriores fora do build público.
 
-Nenhuma obra, equipe, parceria, canal ou lançamento foi inventado. As cenas de estúdio californiano dos anos 70 são imagens conceituais geradas para a identidade, não fotografias de instalações reais nem capas de obras. Prompts, ferramenta e origens estão em `docs/imagens-california-70s.json` e `docs/imagens-polaroids-70s.json`. Molduras de polaroid são feitas em CSS; texturas e ícones são SVGs locais.
+## Identidade e imagens
+
+A paleta usa Midnight `#0B0B0E`, Sand `#F5EBD6`, Sunset `#FF7A00`, Coral `#E63966`, Violet `#7A3FF2` e Pacific `#00A7E1`. Archivo é a fonte dos títulos e Instrument Sans é a fonte de leitura e controles. São fontes locais, com licenças SIL OFL em `assets/fonts/`. O Contorno espectral destaca as ações principais. A combinação pode ser comparada com as demais opções na página local `/opcoes/`.
+
+A iluminação da marca e os controles táteis aplicam as previsões de gradientes luminosos e interfaces expressivas do Canva. A fotografia com granulação analógica segue a direção editorial das previsões da Envato. A combinação de luz quente e sombras frias aproxima o contraste entre natureza e tecnologia descrito pela WGSN e Coloro. [Canva](https://www.canva.com/design-trends/) [Envato](https://elements.envato.com/learn/graphic-design-trends) [WGSN e Coloro](https://www.wgsn.com/en/wgsn/press/press-releases/wgsn-and-coloro-reveal-colour-year-2027-luminous-blue-and-s-s-27-key)
+
+As cenas são imagens conceituais geradas com ImageGen integrado. A fotografia da abertura, suas duas resoluções e as seis imagens editoriais estão em `assets/identidade/`. Os três pedidos de geração foram:
+
+- Abertura panorâmica do estúdio com sombra à esquerda e, à direita, janela para o pôr do sol na costa californiana, com palmeiras, toca-discos e fones em primeiro plano. Fotografia de cinema com grão sutil, sem texto ou interface.
+- Prancha 2 × 2 com cabana sob chuva, palmeiras ao anoitecer, onda do Pacífico e vinil iluminado por luz laranja. Cada quadrante em 3:2, com contraste entre azul escuro e luz quente, sem texto ou bordas.
+- Prancha com dois panoramas separados ao meio. Costa rochosa de Big Sur em luz dourada na metade superior e mesa de mixagem analógica com faders, medidores âmbar e sombras azuladas na metade inferior.
 
 ## Publicar uma obra
 
@@ -55,28 +68,14 @@ Nenhuma mídia toca automaticamente. Áudio e vídeo usam `preload="none"`, e in
 
 ## SEO
 
-`SITE_URL` define a origem (padrão `https://sonora.abt.dev.br`). `INDEXAR=1` libera indexação e gera sitemap com home, catálogo, estúdio e obras publicadas. Sem a variável, `noindex` e `Disallow: /` permanecem. `SITE_URL=` remove metadados que exigem domínio; não pode ser combinado com `INDEXAR=1`. A página 404 sempre permanece `noindex`.
+`SITE_URL` define a origem (padrão `https://sonora.abt.dev.br`). `INDEXAR=1` libera indexação e gera sitemap com home, catálogo, playlists, estúdio e obras publicadas. Sem a variável, `noindex` e `Disallow: /` permanecem. `SITE_URL=` remove metadados que exigem domínio; não pode ser combinado com `INDEXAR=1`. A página 404 sempre permanece `noindex`.
 
-A imagem Open Graph vem de `scripts/og-template.html`; o ícone Apple vem de `scripts/icon-template.html`. O JSON-LD apresenta o estúdio e o site, sem serviços comerciais. Não há backend, CMS, autenticação, rastreadores ou integração com plataformas pagas.
+A imagem Open Graph e o ícone Apple usam a assinatura atual em `assets/identidade/`. O JSON-LD descreve o estúdio e o site.
 
-## Materiais anteriores
+## Reprodução e movimento
 
-As imagens e scripts de demonstração antigos foram preservados como fontes locais. `sound-design.js` e os exemplos de `assets/audio/` não são carregados pelo novo site; os dois arquivos de configuração de demonstração não entram no build. Não são obras do catálogo.
+A sessão de escuta da home e a página de playlists apresentam quatro esboços demonstrativos de 24 segundos. O som de maré é uma recriação sintetizada. A home também apresenta um estudo de síntese de 12 segundos com três arranjos sincronizados em `/#laboratorio`. O conteúdo demonstrativo fica fora de `assets/catalogo.json`.
 
-## Caderno de escuta provisório
+Cada prévia oferece AAC em cerca de 240 KiB e preserva o MP3 como alternativa. O áudio é carregado sob demanda. Na home, a pausa compacta aparece durante a reprodução quando o controle principal sai da tela.
 
-O responsável autorizou exemplos provisórios. O estudo de síntese na home não representa um lançamento e não altera `assets/catalogo.json`. Nada toca automaticamente. Na primeira reprodução, três buffers são renderizados localmente; a troca usa ganhos no mesmo relógio de áudio. Há pausa, retomada, busca por teclado e mensagem de erro com nova tentativa. Os volumes médios são aproximados para a comparação. Mídias e estudo se interrompem mutuamente; ocultar ou sair da página pausa o estudo.
-
-Gravações finais precisam ser alinhadas, autorizadas e revisadas antes da integração. Não cadastrar o exemplo sintetizado como obra publicada.
-
-Lora: https://github.com/google/fonts/tree/main/ofl/lora. Fonte e licença locais, sem chamadas ao Google Fonts durante a visita.
-
-## Ícones, animações e opções de botão
-
-O rodapé usa a assinatura Sulco em vermelho, em `assets/abt-sonora-horizontal-vermelha.svg`, e não exibe o e-mail. O contato permanece na página Estúdio.
-
-`botoes.html` é uma prancha local com cinco opções funcionais: Capa de disco, Fita de papel, Soul pill, Carimbo e Ingresso. Não entra no build público. Capa de disco está em uso nos botões principais e no player.
-
-Animações: entrada única de blocos ao rolar, chegada do selo, movimento das ilustrações no hover e elevação suave das polaroids. Sem JavaScript, o conteúdo permanece disponível; com `prefers-reduced-motion`, as animações ficam desativadas. Nenhuma biblioteca foi adicionada.
-
-Tipografia dos títulos e da navegação atualizada com Shrikhand e Caprasimo, em arquivos locais e licenças SIL OFL em `assets/fonts/`. Referências oficiais em https://github.com/google/fonts/tree/main/ofl/shrikhand e https://github.com/google/fonts/tree/main/ofl/caprasimo. O header usa moldura e faixas de cor, com menu recolhível no celular.
+A reprodução começa por ação do visitante. Iniciar outra mídia pausa a anterior. O espectro radial analisa a faixa durante a reprodução e pausa suas atualizações quando sai da área visível. O WebGL anima a onda da assinatura por intervalos breves, com a imagem original disponível durante a leitura e em navegadores sem WebGL. A preferência por movimento reduzido desativa esses efeitos e as transições decorativas.

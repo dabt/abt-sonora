@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0B0B0E">
+  <title>Tipografia e botões | ABT Sonora</title>
+  <link rel="icon" href="/assets/identidade/favicon.png" type="image/png">
+  <link rel="stylesheet" href="/sonora.css">
+  <link rel="stylesheet" href="./opcoes.css">
+  <script type="module" src="./opcoes.js"></script>
+</head>
+<body>
+  <a class="skip" href="#conteudo">Pular para o conteúdo</a>
+  <header class="header shell">
+    <a class="brand" href="/" aria-label="ABT Sonora, início">
+      <img src="/assets/identidade/assinatura-horizontal.webp" width="466" height="47" alt="ABT Sonora">
+    </a>
+    <a class="text-link back-to-site" href="/">Voltar ao site</a>
+  </header>
+  <main class="shell design-lab" id="conteudo">
+    <header class="lab-heading">
+      <h1>Tipografia e botões</h1>
+      <p>Escolha uma opção de cada grupo para ver a combinação na abertura da ABT Sonora.</p>
+    </header>
+    <div class="lab-columns">
+      <section class="lab-preview" id="previa" aria-labelledby="preview-title">
+        <h2 class="preview-title" id="preview-title">Prévia da home</h2>
+        <div class="preview-cover" data-preview data-type="archivo" data-button="espectral">
+          <div class="preview-copy">
+            <p class="preview-eyebrow">Estúdio criativo</p>
+            <h3 class="preview-headline"><span>Som, ambiente</span> <span>e narrativa</span></h3>
+            <p class="preview-description">Experiências sonoras que conectam pessoas, lugares e histórias.</p>
+            <div class="preview-actions">
+              <button class="demo-cta cta-primary" type="button" data-preview-play>
+                <span class="cta-mark" aria-hidden="true"><i class="play-icon"></i></span><span data-play-text>Ouvir seleção</span>
+              </button>
+              <a class="demo-cta cta-secondary" href="/estudio/">O estúdio</a>
+            </div>
+            <audio preload="none" src="/assets/audio/escutas/cinematicas.mp3"></audio>
+            <p class="preview-error" data-play-error role="alert" hidden>Não foi possível reproduzir a prévia.</p>
+          </div>
+        </div>
+        <div class="preview-selection">
+          <p role="status" data-selection>Archivo + Instrument Sans · Contorno espectral</p>
+          <button class="text-link copy-choice" type="button" data-copy>Copiar escolha</button>
+          <span class="visually-hidden" role="status" data-copy-status></span>
+        </div>
+      </section>
+      <form class="lab-options" autocomplete="off">
+        <fieldset class="option-group" id="tipografia">
+          <legend>Tipografia</legend>
+          <div class="typography-options">
+            <label class="option-card font-option" data-type="space">
+              <input type="radio" name="typography" value="space" aria-labelledby="font-space" aria-describedby="desc-space">
+              <span class="option-name" id="font-space">Space Grotesk + Inter</span>
+              <span class="option-caption" id="desc-space">Geométrica, com traços angulares.</span>
+              <span class="font-title" aria-hidden="true">Som e narrativa</span>
+              <span class="font-body" aria-hidden="true">Experiências sonoras que conectam.</span>
+            </label>
+            <label class="option-card font-option" data-type="archivo">
+              <input type="radio" name="typography" value="archivo" aria-labelledby="font-archivo" aria-describedby="desc-archivo" checked>
+              <span class="option-name" id="font-archivo">Archivo + Instrument Sans</span>
+              <span class="option-caption" id="desc-archivo">Títulos encorpados, com presença de pôster.</span>
+              <span class="font-title" aria-hidden="true">Som e narrativa</span>
+              <span class="font-body" aria-hidden="true">Experiências sonoras que conectam.</span>
+            </label>
+            <label class="option-card font-option" data-type="jakarta">
+              <input type="radio" name="typography" value="jakarta" aria-labelledby="font-jakarta" aria-describedby="desc-jakarta">
+              <span class="option-name" id="font-jakarta">Plus Jakarta Sans + Inter</span>
+              <span class="option-caption" id="desc-jakarta">Formas arredondadas e peso mais leve.</span>
+              <span class="font-title" aria-hidden="true">Som e narrativa</span>
+              <span class="font-body" aria-hidden="true">Experiências sonoras que conectam.</span>
+            </label>
+            <label class="option-card font-option" data-type="instrument">
+              <input type="radio" name="typography" value="instrument" aria-labelledby="font-instrument" aria-describedby="desc-instrument">
+              <span class="option-name" id="font-instrument">Instrument Sans + Lora</span>
+              <span class="option-caption" id="desc-instrument">Título limpo e leitura com serifa.</span>
+              <span class="font-title" aria-hidden="true">Som e narrativa</span>
+              <span class="font-body" aria-hidden="true">Experiências sonoras que conectam.</span>
+            </label>
+            <label class="option-card font-option" data-type="fraunces">
+              <input type="radio" name="typography" value="fraunces" aria-labelledby="font-fraunces" aria-describedby="desc-fraunces">
+              <span class="option-name" id="font-fraunces">Fraunces + Inter</span>
+              <span class="option-caption" id="desc-fraunces">Serifas expressivas, como em uma capa de disco.</span>
+              <span class="font-title" aria-hidden="true">Som e narrativa</span>
+              <span class="font-body" aria-hidden="true">Experiências sonoras que conectam.</span>
+            </label>
+          </div>
+        </fieldset>
+        <fieldset class="option-group" id="botoes">
+          <legend>Botões</legend>
+          <div class="button-options">
+            <label class="option-card button-option" data-button="espectral">
+              <input type="radio" name="button" value="espectral" aria-labelledby="button-espectral" aria-describedby="desc-espectral" checked>
+              <span class="option-details"><span class="option-name" id="button-espectral">Contorno espectral</span><span class="option-caption" id="desc-espectral">Filete luminoso nas cores da onda.</span></span>
+              <span class="button-samples" aria-hidden="true"><span class="demo-cta cta-primary"><span class="cta-mark"><i class="play-icon"></i></span>Ouvir seleção</span><span class="demo-cta cta-secondary">O estúdio</span></span>
+            </label>
+            <label class="option-card button-option" data-button="ambar">
+              <input type="radio" name="button" value="ambar" aria-labelledby="button-ambar" aria-describedby="desc-ambar">
+              <span class="option-details"><span class="option-name" id="button-ambar">Âmbar sólido</span><span class="option-caption" id="desc-ambar">Laranja preenchido e cantos discretos.</span></span>
+              <span class="button-samples" aria-hidden="true"><span class="demo-cta cta-primary"><span class="cta-mark"><i class="play-icon"></i></span>Ouvir seleção</span><span class="demo-cta cta-secondary">O estúdio</span></span>
+            </label>
+            <label class="option-card button-option" data-button="capsula">
+              <input type="radio" name="button" value="capsula" aria-labelledby="button-capsula" aria-describedby="desc-capsula">
+              <span class="option-details"><span class="option-name" id="button-capsula">Cápsula fosca</span><span class="option-caption" id="desc-capsula">Formato arredondado e granulação fina.</span></span>
+              <span class="button-samples" aria-hidden="true"><span class="demo-cta cta-primary"><span class="cta-mark"><i class="play-icon"></i></span>Ouvir seleção</span><span class="demo-cta cta-secondary">O estúdio</span></span>
+            </label>
+            <label class="option-card button-option" data-button="editorial">
+              <input type="radio" name="button" value="editorial" aria-labelledby="button-editorial" aria-describedby="desc-editorial">
+              <span class="option-details"><span class="option-name" id="button-editorial">Linha editorial</span><span class="option-caption" id="desc-editorial">Texto, ícone e um traço de cor.</span></span>
+              <span class="button-samples" aria-hidden="true"><span class="demo-cta cta-primary"><span class="cta-mark"><i class="play-icon"></i></span>Ouvir seleção</span><span class="demo-cta cta-secondary">O estúdio</span></span>
+            </label>
+            <label class="option-card button-option" data-button="estudio">
+              <input type="radio" name="button" value="estudio" aria-labelledby="button-estudio" aria-describedby="desc-estudio">
+              <span class="option-details"><span class="option-name" id="button-estudio">Controle de estúdio</span><span class="option-caption" id="desc-estudio">Botão em relevo inspirado em equipamento de áudio.</span></span>
+              <span class="button-samples" aria-hidden="true"><span class="demo-cta cta-primary"><span class="cta-mark"><i class="play-icon"></i></span>Ouvir seleção</span><span class="demo-cta cta-secondary">O estúdio</span></span>
+            </label>
+          </div>
+        </fieldset>
+      </form>
+    </div>
+    <a class="back-to-preview outline-button" href="#previa">Ver combinação</a>
+  </main>
+</body>
+</html>

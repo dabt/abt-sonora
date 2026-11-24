@@ -9,6 +9,7 @@ test('catálogo vazio mantém apresentação honesta e não cria filtros ou link
   const html = await readFile(new URL('trabalhos/index.html', root), 'utf8');
   const output = renderCatalogue(html, validateCatalogue([]));
   assert.match(output, /Ainda não há obras publicadas/);
+  assert.match(output, /href="\/#laboratorio">Experimentar os arranjos/);
   assert.doesNotMatch(output, /data-filter=|href="\/projetos\//);
 });
 
@@ -21,6 +22,7 @@ test('publica somente obras aprovadas, com filtros reais e página acessível se
   assert.match(output, /href="\/projetos\/estudo-de-teste\/"/);
   assert.match(output, /data-filter="musica"/);
   assert.match(output, /2 trabalhos publicados/);
+  assert.doesNotMatch(output, /Experimentar os arranjos/);
   assert.doesNotMatch(output, /Título privado|rascunho-secreto/);
   assert.match(output, /Estudo &lt;de teste&gt;/);
 });

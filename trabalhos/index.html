@@ -3,56 +3,85 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#E2DAC2">
-  <meta name="description" content="Catálogo da abt sonora. Um espaço para músicas, filmes, paisagens sonoras e experimentos audiovisuais.">
+  <meta name="theme-color" content="#0B0B0E">
+  <meta name="description" content="Catálogo da ABT Sonora. Música, paisagens sonoras e experimentos audiovisuais.">
   <meta name="robots" content="noindex, nofollow">
-  <title>Trabalhos | abt sonora</title>
-  <link rel="icon" href="/assets/abt-sonora-simbolo-laranja.svg" type="image/svg+xml">
-  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+  <title>Projetos | ABT Sonora</title>
+  <link rel="icon" href="/assets/identidade/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/identidade/apple-touch-icon.png">
   <!--seo-->
   <link rel="canonical" href="{{SITE_URL}}/trabalhos/">
   <meta property="og:type" content="website">
-  <meta property="og:site_name" content="abt sonora">
+  <meta property="og:site_name" content="ABT Sonora">
   <meta property="og:locale" content="pt_BR">
-  <meta property="og:title" content="Trabalhos | abt sonora">
-  <meta property="og:description" content="Catálogo da abt sonora. Um espaço para músicas, filmes, paisagens sonoras e experimentos audiovisuais.">
+  <meta property="og:title" content="Projetos | ABT Sonora">
+  <meta property="og:description" content="Catálogo da ABT Sonora. Música, paisagens sonoras e experimentos audiovisuais.">
   <meta property="og:url" content="{{SITE_URL}}/trabalhos/">
-  <meta property="og:image" content="{{SITE_URL}}/assets/og-abt-sonora.jpg">
+  <meta property="og:image" content="{{SITE_URL}}/assets/identidade/og-abt-sonora.jpg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="abt sonora. Sound beyond boundaries.">
+  <meta property="og:image:alt" content="ABT Sonora · Creative Audio Studio">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Trabalhos | abt sonora">
-  <meta name="twitter:description" content="Catálogo da abt sonora. Um espaço para músicas, filmes, paisagens sonoras e experimentos audiovisuais.">
-  <meta name="twitter:image" content="{{SITE_URL}}/assets/og-abt-sonora.jpg">
-  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"{{SITE_URL}}/#estudio","name":"abt sonora","url":"{{SITE_URL}}/","logo":"{{SITE_URL}}/assets/abt-sonora-simbolo-laranja.svg","description":"Estúdio independente de música e experimentação audiovisual.","parentOrganization":{"@type":"Organization","name":"ABT Tecnologia","url":"https://abt.dev.br/"}},{"@type":"WebSite","name":"abt sonora","url":"{{SITE_URL}}/","inLanguage":"pt-BR","publisher":{"@id":"{{SITE_URL}}/#estudio"}}]}</script>
+  <meta name="twitter:title" content="Projetos | ABT Sonora">
+  <meta name="twitter:description" content="Catálogo da ABT Sonora. Música, paisagens sonoras e experimentos audiovisuais.">
+  <meta name="twitter:image" content="{{SITE_URL}}/assets/identidade/og-abt-sonora.jpg">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"{{SITE_URL}}/#estudio","name":"ABT Sonora","url":"{{SITE_URL}}/","logo":"{{SITE_URL}}/assets/identidade/assinatura-horizontal.webp","description":"Estúdio independente de música e experimentação audiovisual.","parentOrganization":{"@type":"Organization","name":"ABT Tecnologia","url":"https://abt.dev.br/"}},{"@type":"WebSite","name":"ABT Sonora","url":"{{SITE_URL}}/","inLanguage":"pt-BR","publisher":{"@id":"{{SITE_URL}}/#estudio"}}]}</script>
   <!--/seo-->
-  <link rel="preload" href="/assets/fonts/instrument-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="preload" href="/assets/fonts/lora-variable.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="preload" href="/assets/fonts/shrikhand-regular.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="preload" href="/assets/fonts/caprasimo-regular.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="stylesheet" href="/styles.css">
+  <link rel="stylesheet" href="/sonora.css">
   <script src="/site.js" defer></script>
+  <script src="/logo.js" type="module"></script>
 </head>
 <body>
   <a class="skip" href="#conteudo">Pular para o conteúdo</a>
   <header class="header shell">
-    <a class="brand" href="/" aria-label="abt sonora, início"><img src="/assets/abt-sonora-horizontal-escura.svg" alt="abt sonora" width="570" height="165"></a>
-    <div class="header-note"><span>estúdio independente</span><strong>música, som e imagem</strong></div>
+    <a class="brand" href="/" aria-label="ABT Sonora, início" data-logo>
+      <img src="/assets/identidade/assinatura-horizontal.webp" width="466" height="47" alt="ABT Sonora">
+    </a>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu" hidden>Menu <span aria-hidden="true">+</span></button>
-    <nav id="menu" aria-label="Principal"><a href="/">Início</a><a href="/trabalhos/" aria-current="page">Trabalhos</a><a href="/estudio/">Estúdio</a></nav>
+    <nav id="menu" aria-label="Principal">
+      <a href="/">Home</a>
+      <a href="/trabalhos/" aria-current="page">Projetos</a>
+      <a href="/playlists/">Playlists</a>
+      <a href="/estudio/">Estúdio</a>
+      <a class="header-listen" href="/#vitrola"><i class="vinyl-icon" aria-hidden="true"></i>Abrir vitrola</a>
+    </nav>
   </header>
   <main id="conteudo">
-    <section class="page-intro shell" aria-labelledby="work-title"><p class="eyebrow">O catálogo</p><h1 id="work-title">Para ouvir.<br><em>Ver. Explorar.</em></h1><div class="page-intro-bottom"><p>Música, audiovisual e experimentos.<br>As diferentes formas de uma mesma curiosidade.</p><span class="catalogue-count"><!--count:start-->Nenhum trabalho publicado<!--count:end--></span></div></section>
+    <section class="internal-hero project-index-hero" aria-labelledby="work-title">
+      <div class="shell internal-copy">
+        <p class="eyebrow">Catálogo</p><h1 id="work-title">Projetos</h1>
+        <p>Composições, filmes e experimentos que exploram o encontro entre som e imagem.</p>
+        <span class="catalogue-count"><!--count:start-->Ainda não há obras publicadas<!--count:end--></span>
+      </div>
+    </section>
     <section class="catalogue shell" aria-label="Trabalhos do estúdio">
       <!--catalogue:start-->
-      <div class="catalogue-empty catalogue-empty-large"><img src="/assets/abt-sonora-simbolo-laranja.svg" width="180" height="180" alt=""><div><p class="empty-label">Catálogo em preparação</p><h2>Há espaço<br>para o que vem.</h2><p>Ainda não há obras publicadas. Quando estiverem disponíveis, você poderá ouvi-las, assisti-las e conhecer seus processos por aqui.</p><a class="text-link" href="/estudio/">Conheça o estúdio enquanto isso</a></div></div>
+      <article class="catalogue-empty process-study">
+        <img src="/assets/identidade/mesa.webp" width="1536" height="512" alt="Mesa de som iluminada em âmbar." decoding="async">
+        <div>
+          <p class="eyebrow">Estudo de processo</p>
+          <h2>Uma ideia, três escutas.</h2>
+          <p>Uma frase de quatro compassos serve de ponto de partida. Em <strong>Essência</strong>, as notas ficam expostas. <strong>Pulso</strong> acrescenta ritmo, e <strong>Horizonte</strong> prolonga a melodia no espaço.</p>
+          <p>No laboratório, troque entre os arranjos enquanto a frase toca e ouça o que muda no mesmo trecho.</p>
+          <a class="outline-button" href="/#laboratorio">Experimentar os arranjos</a>
+        </div>
+      </article>
       <!--catalogue:end-->
     </section>
   </main>
-  <footer class="footer shell" id="rodape" aria-label="Rodapé">
-    <div class="footer-main"><div class="footer-signature"><a class="footer-brand" href="/" aria-label="abt sonora, início"><img src="/assets/abt-sonora-horizontal-vermelha.svg" alt="abt sonora" width="570" height="165" loading="lazy" decoding="async"></a><h2 class="footer-signoff">A escuta<br><em>continua.</em></h2></div><nav class="footer-nav" aria-label="Navegação do rodapé"><p class="eyebrow">Siga explorando</p><a href="/">Início</a><a href="/trabalhos/">Trabalhos</a><a href="/estudio/">Estúdio</a></nav></div>
-    <div class="footer-bottom"><p>© <span data-year>2026</span> abt sonora <span class="footer-credit">/ <a href="https://abt.dev.br/">ABT Tecnologia</a></span></p><a class="footer-top-link" href="#conteudo">Voltar ao topo</a></div>
+  <footer class="footer shell" id="rodape">
+    <div class="footer-main">
+      <a class="footer-brand" href="/" aria-label="ABT Sonora, início" data-logo="footer">
+        <img src="/assets/identidade/assinatura-principal.webp" alt="ABT Sonora · Creative Audio Studio" width="810" height="287" loading="lazy" decoding="async">
+      </a>
+      <nav class="footer-nav" aria-label="Rodapé">
+        <a href="/trabalhos/">Projetos</a><a href="/playlists/">Playlists</a><a href="/estudio/">Estúdio</a><a href="/estudio/#contato">Contato</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <p>© <span data-year>2026</span> ABT Sonora <span>/</span> <a href="https://abt.dev.br/">ABT Tecnologia</a></p>
+      <a href="#conteudo">Voltar ao topo</a>
+    </div>
   </footer>
 </body>
 </html>

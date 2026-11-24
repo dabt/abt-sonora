@@ -1,5 +1,7 @@
 # abt sonora — base da marca
 
+Registro da direção de 23/11/2026. A identidade em uso desde 24/11/2026 está descrita no [README](../README.md#identidade-e-imagens) e na [prancha local](../identidade.html).
+
 Direção aprovada em 23/11/2026. Este documento substitui o posicionamento comercial anterior. Histórico de alterações preservado no Git.
 
 ## Nome e posicionamento
