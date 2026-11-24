@@ -1,11 +1,11 @@
 import { escapeHtml } from './catalogue.mjs';
 
 const defaultOrigin = 'https://sonora.abt.dev.br';
-const brand = 'ABT Sonora';
+const brand = 'Abt Sonora';
 const locale = 'pt-BR';
 const shareImage = {
   path: '/assets/identidade/og-abt-sonora.jpg',
-  alt: 'Assinatura ABT Sonora sobre um estúdio de som ao pôr do sol',
+  alt: 'Assinatura Abt Sonora sobre um estúdio de som ao pôr do sol',
   width: 1200,
   height: 630,
 };

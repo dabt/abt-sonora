@@ -57,9 +57,11 @@ test('metadados funcionam com e sem domínio e preservam noindex até lançament
   const production = applySeo(html, { origin, index: true, page });
   assert.match(production, /content="index, follow, max-image-preview:large"/);
   assert.match(production, /href="https:\/\/sonora.example.com\/"/);
+  assert.match(production, /<title>Abt Sonora \|/);
+  assert.match(production, /og:site_name" content="Abt Sonora"/);
   const schema = JSON.parse(production.match(/<script type="application\/ld\+json">([^<]+)<\/script>/)[1]);
-  assert.ok(schema['@graph'].some(item => item['@type'] === 'WebSite' && item.name === 'ABT Sonora' && item.url === `${origin}/`));
-  assert.ok(schema['@graph'].some(item => item['@type'] === 'Organization' && item.logo.height === 180));
+  assert.ok(schema['@graph'].some(item => item['@type'] === 'WebSite' && item.name === 'Abt Sonora' && item.url === `${origin}/`));
+  assert.ok(schema['@graph'].some(item => item['@type'] === 'Organization' && item.name === 'Abt Sonora' && item.logo.height === 180));
   const errorPage = await readFile(new URL('404.html', root), 'utf8');
   assert.doesNotMatch(applySeo(errorPage, { origin, index: true }), /rel="canonical"|application\/ld\+json/);
   assert.match(applySeo(errorPage, { origin, index: true }), /content="noindex, nofollow"/);
@@ -87,7 +89,7 @@ test('ficha usa capa própria, trilha de navegação e escapa dados de compartil
   const html = applySeo(renderProject(template, project), {
     origin, index: true, page: { path, name: project.titulo, image: { path: project.capa, alt: project.capaAlt }, breadcrumbs },
   });
-  assert.match(html, /og:title" content="Som &quot;cru&quot; &lt;\/script&gt; \| ABT Sonora"/);
+  assert.match(html, /og:title" content="Som &quot;cru&quot; &lt;\/script&gt; \| Abt Sonora"/);
   assert.ok(html.includes(`<meta property="og:image" content="${origin}${project.capa}">`));
   assert.match(html, /og:image:alt" content="Cobre &amp; sombra"/);
   assert.doesNotMatch(html, /og:image:width|og:image:height/);

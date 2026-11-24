@@ -57,4 +57,4 @@ if (seo.index) {
   const urls = pages.filter(page => page.path).map(({ path }) => `  <url><loc>${escapeHtml(seo.origin + path)}</loc></url>`);
   await writeFile(new URL('sitemap.xml', dist), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.join('\n')}\n</urlset>\n`);
 }
-console.log(`abt sonora: ${output.size} páginas em dist/. ${works.length} obras publicadas. Indexação ${seo.index ? 'liberada' : 'bloqueada'}.`);
+console.log(`Abt Sonora: ${output.size} páginas em dist/. ${works.length} obras publicadas. Indexação ${seo.index ? 'liberada' : 'bloqueada'}.`);

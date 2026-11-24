@@ -1,6 +1,6 @@
-# ABT Sonora
+# Abt Sonora
 
-Estúdio criativo independente de música, paisagens sonoras e experimentação audiovisual. A identidade de 24/11/2026 aplica o painel ABT Sonora e a composição do Estúdio Sonoro ao Pôr do Sol.
+Estúdio criativo independente de música, paisagens sonoras e experimentação audiovisual. A identidade de 24/11/2026 aplica o painel Abt Sonora e a composição do Estúdio Sonoro ao Pôr do Sol.
 
 ## Desenvolvimento
 
