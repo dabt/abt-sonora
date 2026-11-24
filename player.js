@@ -163,15 +163,15 @@ function mountPreview(root) {
   const play = root.querySelector('[data-preview-play]');
   const volume = root.querySelector('[data-preview-mute]');
   const label = root.querySelector('[data-preview-label]');
-  const length = root.querySelector('[data-preview-length]');
+  const seconds = root.querySelector('[data-record-seek]').max;
   const timeline = root.querySelector('[data-preview-timeline]');
   const title = root.querySelector('h2').textContent;
   const error = root.querySelector('[data-media-error]');
 
   function updateTransport() {
     const playing = !audio.paused && !audio.ended;
-    label.textContent = playing ? 'Pausar prévia' : 'Ouvir prévia';
-    play.setAttribute('aria-label', `${label.textContent} — ${title}`);
+    label.textContent = playing ? 'Pausar' : 'Ouvir';
+    play.setAttribute('aria-label', playing ? `Pausar — ${title}` : `Ouvir ${seconds} segundos de ${title}`);
     play.toggleAttribute('data-playing', playing);
     volume.setAttribute('aria-pressed', String(audio.muted));
   }
@@ -193,7 +193,6 @@ function mountPreview(root) {
   volume.addEventListener('click', () => { audio.muted = !audio.muted; });
   bindTimeline(root, audio, loaded => {
     timeline.hidden = !loaded;
-    length.hidden = loaded;
   });
   audio.hidden = true;
   root.querySelector('[data-preview-controls]').hidden = false;
@@ -215,20 +214,26 @@ function mountPlayer(root) {
   const mini = document.querySelector('[data-record-mini]');
   const miniTitle = mini.querySelector('[data-mini-title]');
   const miniCover = mini.querySelector('[data-mini-cover]');
-  const miniPause = mini.querySelector('[data-mini-pause]');
+  const miniState = mini.querySelector('[data-mini-state]');
+  const miniPlay = mini.querySelector('[data-mini-play]');
   const updateTimeline = bindTimeline(root, audio);
   const spectrum = createSpectrum(root, audio);
   let index = 0, request = 0;
   let mainControlVisible = true;
 
   function updateMini() {
-    mini.hidden = audio.paused || audio.ended || Boolean(audio.error) || mainControlVisible;
+    // Keep the paused control available until keyboard focus leaves it.
+    const paused = audio.paused || audio.ended || Boolean(audio.error);
+    mini.hidden = mainControlVisible || (paused && !miniPlay.matches(':focus-visible'));
   }
 
   function updateTransport() {
-    const playing = !audio.paused && !audio.ended;
-    play.setAttribute('aria-label', playing ? 'Pausar faixa' : 'Reproduzir faixa');
-    play.toggleAttribute('data-playing', playing);
+    const playing = !audio.paused && !audio.ended && !audio.error;
+    for (const button of [play, miniPlay]) {
+      button.setAttribute('aria-label', playing ? 'Pausar faixa' : 'Reproduzir faixa');
+      button.toggleAttribute('data-playing', playing);
+    }
+    miniState.textContent = playing ? 'Em reprodução' : 'Em pausa';
     mute.setAttribute('aria-pressed', String(audio.muted));
     previous.disabled = index === 0;
     next.disabled = index === tracks.length - 1;
@@ -242,7 +247,7 @@ function mountPlayer(root) {
   }
 
   function start() {
-    if (!audio.paused && !audio.ended) return;
+    if (!audio.paused && !audio.ended && !audio.error) return;
     const ticket = ++request;
     error.hidden = true;
     if (audio.error) audio.load();
@@ -293,21 +298,20 @@ function mountPlayer(root) {
   document.querySelectorAll('[data-start-record]').forEach(link => link.addEventListener('click', event => {
     if (!isModified(event)) start();
   }));
-  play.addEventListener('click', () => {
-    if (audio.paused || audio.ended) start();
-    else audio.pause();
-  });
+  for (const button of [play, miniPlay]) {
+    button.addEventListener('click', () => {
+      if (audio.paused || audio.ended || audio.error) start();
+      else audio.pause();
+    });
+  }
   previous.addEventListener('click', () => selectTrack(index - 1, !audio.paused));
   next.addEventListener('click', () => selectTrack(index + 1, !audio.paused));
   mute.addEventListener('click', () => { audio.muted = !audio.muted; });
-  miniPause.addEventListener('click', () => {
-    if (miniPause.matches(':focus-visible')) play.focus();
-    audio.pause();
-  });
+  miniPlay.addEventListener('blur', () => queueMicrotask(updateMini));
   if ('IntersectionObserver' in window) {
     new IntersectionObserver(([entry]) => {
       mainControlVisible = entry.intersectionRatio >= .95;
-      if (mainControlVisible && document.activeElement === miniPause) play.focus({ preventScroll: true });
+      if (mainControlVisible && document.activeElement === miniPlay) play.focus({ preventScroll: true });
       updateMini();
     }, { threshold: .95 }).observe(play);
   }

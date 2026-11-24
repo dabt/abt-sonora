@@ -11,10 +11,13 @@
   --record-backdrop: url('/assets/identidade/cinematicas.webp');
   display: grid;
   grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr);
+  grid-template-areas: 'stage console' 'stage details';
+  gap: clamp(.8rem, 1.45vw, 1.45rem) 0;
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: calc(var(--radius) * 1.2);
-  background: #121118;
+  background: var(--film-grain), radial-gradient(ellipse at 97% 0%, color-mix(in srgb, var(--record-aura) 15%, transparent), transparent 63%), linear-gradient(155deg, #15141d, #100f16 72%);
+  background-blend-mode: soft-light, normal, normal;
   box-shadow: 0 1.5rem 5rem rgb(0 0 0 / .34);
 }
 
@@ -37,6 +40,7 @@
 }
 
 .record-stage {
+  grid-area: stage;
   position: relative;
   display: grid;
   place-items: center;
@@ -127,15 +131,14 @@
 .record-spectrum { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
 .record-signature { position: absolute; bottom: clamp(.9rem, 2.1vw, 1.8rem); left: clamp(1rem, 2.5vw, 2rem); width: clamp(8rem, 13vw, 11rem); }
 
-.record-console {
+.record-console, .record-details {
   display: grid;
-  align-content: center;
   gap: clamp(.8rem, 1.45vw, 1.45rem);
   min-width: 0;
   padding: clamp(1.15rem, 2.7vw, 2.6rem);
-  background-image: var(--film-grain), radial-gradient(ellipse at 97% 0%, color-mix(in srgb, var(--record-aura) 15%, transparent), transparent 63%), linear-gradient(155deg, #15141d, #100f16 72%);
-  background-blend-mode: soft-light, normal, normal;
 }
+.record-console { grid-area: console; align-content: end; padding-bottom: 0; }
+.record-details { grid-area: details; align-content: start; padding-top: 0; }
 
 .record-current .eyebrow { color: #ffa86d; letter-spacing: .16em; }
 .record-current h3 { margin-top: .35rem; font-size: clamp(2.1rem, 4.65vw, 4.2rem); text-wrap: balance; }
@@ -197,13 +200,16 @@
 .record-mini span { color: var(--muted); font-size: .78rem; }
 .record-mini strong { line-height: 1.2; }
 .record-mini .record-play .play-icon { width: .66rem; height: .76rem; }
+html:has(.record-mini:not([hidden])) { scroll-padding-bottom: calc(5.25rem + env(safe-area-inset-bottom)); }
 body:has(.record-mini:not([hidden])) { padding-bottom: calc(4.5rem + env(safe-area-inset-bottom)); }
 
-.preview-controls { margin-top: 1.15rem; }
+.preview-controls { margin-block: .8rem 1rem; }
+.preview-controls .record-timeline { margin-top: .4rem; }
 .preview-transport { display: flex; flex-wrap: wrap; align-items: center; gap: .6rem; }
 .preview-transport .record-mute { margin-inline-start: auto; }
-.preview-play { border-color: transparent; background: var(--button-spectral); box-shadow: var(--button-glow); }
+.preview-play { min-width: 8.15rem; gap: .4rem; border-color: transparent; background: var(--button-spectral); box-shadow: var(--button-glow); }
 .preview-length { color: var(--muted); font-size: .875rem; font-variant-numeric: tabular-nums; }
+.preview-play[data-playing] .preview-length { display: none; }
 
 .record-queue { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .43rem; margin: 0; padding: 0; list-style: none; }
 .record-queue a { display: grid; min-height: 3.25rem; grid-template-columns: 2.1rem minmax(0, 1fr) .48rem; align-items: center; gap: .42rem; padding: .38rem .44rem; border: 1px solid var(--line); border-radius: .36rem; background: rgb(11 11 16 / .54); transition: border-color .25s, background .25s; }
@@ -228,9 +234,12 @@ body:has(.record-mini:not([hidden])) { padding-bottom: calc(4.5rem + env(safe-ar
 
 @media (max-width: 700px) {
   .record-player, .listening-notes { grid-template-columns: minmax(0, 1fr); }
-  .record-stage { min-height: 0; border-right: 0; border-bottom: 1px solid var(--line); }
-  .record-artwork { width: min(100% - 1.4rem, 21rem); margin-block: .18rem 1.6rem; }
-  .record-console { gap: 1rem; }
+  .record-player { grid-template-areas: 'console' 'stage' 'details'; row-gap: 0; }
+  .record-stage { min-height: 0; border: 0; border-block: 1px solid var(--line); }
+  .record-artwork { width: min(68%, 17rem); margin-block: .5rem 1.6rem; }
+  .record-console, .record-details { gap: 1rem; }
+  .record-console { padding-bottom: 1.15rem; }
+  .record-details { padding-top: 1.15rem; }
   .record-description { min-height: 0; }
   .record-queue { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }

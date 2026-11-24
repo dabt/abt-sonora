@@ -13,11 +13,11 @@ for (const project of works) for (const field of ['capa', 'audio', 'video']) {
 }
 
 const home = { file: 'index.html', path: '/', name: 'Som, ambiente e narrativa' };
-const catalogue = { file: 'trabalhos/index.html', path: '/trabalhos/', name: 'Projetos', type: 'CollectionPage' };
+const catalogue = { file: 'trabalhos/index.html', path: '/trabalhos/', name: 'Projetos e estudos', type: 'CollectionPage' };
 const pages = [
   home,
   catalogue,
-  { file: 'playlists/index.html', path: '/playlists/', name: 'Playlists', type: 'CollectionPage' },
+  { file: 'playlists/index.html', path: '/playlists/', name: 'Coleções sonoras', type: 'CollectionPage' },
   { file: 'estudio/index.html', path: '/estudio/', name: 'Estúdio', type: 'AboutPage' },
   { file: '404.html' },
 ];

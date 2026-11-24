@@ -11,9 +11,9 @@
   const error = root.querySelector('[data-study-error]');
   const description = root.querySelector('[data-study-description]');
   const descriptions = {
-    essencia: 'A melodia fica em primeiro plano. Notas curtas e intervalos de silêncio deixam cada frase aparecer.',
-    pulso: 'O mesmo motivo encontra baixo e bateria. O andamento continua igual; os acentos mudam a sensação de movimento.',
-    horizonte: 'A mesma frase ganha camadas longas e ecos. Escute como as notas passam a ocupar os intervalos entre uma frase e outra.',
+    essencia: 'As teclas fazem a melodia e os acordes. Notas curtas e pausas deixam cada frase aparecer.',
+    pulso: 'Baixo e bateria entram junto das teclas. Os acentos mudam a sensação de movimento.',
+    horizonte: 'Notas sustentadas e ecos se somam às teclas e ocupam os intervalos da frase.',
   };
   const duration = 12, sampleRate = 32000;
   let context, buffers, rendering, sources = [], gains = [], mix = 'essencia';
@@ -124,7 +124,6 @@
     seek.setAttribute('aria-valuetext',`${time.toFixed(1).replace('.',',')} segundos de 12`);
     label.textContent=preparing?'Preparando áudio…':playing?'Pausar estudo':'Ouvir estudo';
     play.querySelector('span[aria-hidden]').textContent=playing?'Ⅱ':'▶';
-    root.classList.toggle('is-playing',playing);
   }
   function tick(){draw();if(playing)frame=requestAnimationFrame(tick);}
   function stopSources(){sources.forEach(source=>{source.onended=null;try{source.stop();}catch{}source.disconnect();});gains.forEach(gain=>gain.disconnect());sources=[];gains=[];cancelAnimationFrame(frame);}
@@ -151,7 +150,9 @@
     finally{preparing=false;play.disabled=false;draw();}
   });
   root.querySelectorAll('[data-mix]').forEach(button=>button.addEventListener('click',()=>{
-    mix=button.dataset.mix;description.textContent=descriptions[mix];
+    mix=button.dataset.mix;
+    root.dataset.arrangement = mix;
+    description.textContent=descriptions[mix];
     root.querySelectorAll('[data-mix]').forEach(item=>item.setAttribute('aria-pressed',String(item===button)));
     if(playing)gains.forEach((gain,index)=>{const now=context.currentTime;gain.gain.cancelScheduledValues(now);gain.gain.setValueAtTime(gain.gain.value,now);gain.gain.linearRampToValueAtTime(Object.keys(descriptions)[index]===mix?1:0,now+.08);});
   }));
