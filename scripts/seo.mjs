@@ -57,7 +57,7 @@ function structuredData(origin, page, image) {
         width: 180,
         height: 180,
       },
-      description: 'Estúdio criativo independente de música, paisagens sonoras e experimentação audiovisual.',
+      description: 'Estúdio criativo e selo musical independente dedicado à composição, à produção audiovisual e à experimentação sonora.',
       parentOrganization: { '@type': 'Organization', name: 'ABT Tecnologia', url: 'https://abt.dev.br/' },
     }, {
       '@type': 'WebSite',

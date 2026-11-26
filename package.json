@@ -2,7 +2,7 @@
   "name": "abt-sonora",
   "version": "0.1.0",
   "private": true,
-  "description": "Abt Sonora — estúdio independente de música e experimentação audiovisual",
+  "description": "Abt Sonora — estúdio criativo e selo musical independente",
   "type": "module",
   "scripts": {
     "dev": "node scripts/serve.mjs",

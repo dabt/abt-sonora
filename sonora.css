@@ -178,7 +178,7 @@ button.outline-button:disabled { cursor: default; opacity: .65; }
 
 .hero-inner { padding-top: clamp(9.2rem, 11.38vw, 14rem); padding-left: clamp(1rem, 2.35vw, 2.6rem); }
 .hero-copy { max-width: 38rem; animation: copy-entry .5s var(--ease) both; }
-.hero .eyebrow { font-weight: 530; letter-spacing: .4em; }
+.hero .eyebrow { font-weight: 530; letter-spacing: .22em; }
 .hero h1 { margin-top: clamp(1.25rem, 1.55vw, 1.7rem); font-size: clamp(2.6rem, 3.55vw, 4.1rem); font-weight: var(--hero-title-weight); letter-spacing: var(--hero-title-spacing); text-transform: uppercase; text-wrap: initial; }
 .hero h1 span { display: block; }
 .hero-lead { max-width: 31ch; margin-top: 1.37rem; font-size: clamp(1.05rem, 1.28vw, 1.35rem); line-height: 1.5; }
@@ -479,7 +479,7 @@ body:has(.record-player.is-playing) .hero-wave { animation: wave-level .85s ease
   .hero::after { background: linear-gradient(90deg, rgb(5 5 8 / .71), rgb(5 5 8 / .28)), linear-gradient(180deg, rgb(5 5 8 / .51), transparent 25%, transparent 67%, var(--midnight) 100%); }
   .hero-inner { padding-top: clamp(8.9rem, 29vw, 12.2rem); }
   .hero h1 { font-size: clamp(2rem, 7.55vw, 3.2rem); }
-  .hero .eyebrow { letter-spacing: .29em; }
+  .hero .eyebrow { letter-spacing: .16em; }
   .hero-lead { max-width: 29ch; }
   .hero-wave { width: min(8.3rem, 26vw); }
   .collection-shelf { display: block; width: 100%; margin: 0; }
